@@ -1,0 +1,14 @@
+{
+    "name": "nineinchnick/yii-exporter",
+    "description": "A widget for the Yii framework for exporting data.",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Jan Waś",
+            "email": "janek.jan@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}

@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	}
+body{
+	font-family:Helvetica, sans-serif, Arial;
+	background-color:#E8E8E7;
+	}
+.login-gr{
+	width:450px;
+	height:240px;
+	margin:15% auto;
+	background-color:#E0DFDE;
+	box-shadow:1px 1px 5px #999999;
+	}
+.barra-logo{
+	width:86px;
+	height:105px;
+	background-color:#C42035; 
+	float:left;
+	padding:5px 0 0 0;
+	text-align:center;
+	margin:-5px 5px 0 15px;
+	}
+        #yw0{
+            
+            float:right;
+        }
+.inicio-sesion{
+	width:320px;
+	float:left;
+	margin:20px 10px;
+	}
+.inicio-sesion label{
+	width:100%;
+	float:left;
+	font-size:16px;
+	color:#4D4D4F;
+	margin-top:15px;
+	}
+.inicio-sesion input{
+	width:90%;
+	padding:5px 5%;
+	float:left;
+	}	
+.btn-Ingresar{
+	width:auto !important;
+	background-color:#000;
+	color:#FFF;
+	margin:30px 0 0 0;
+	padding:5px 30px !important;
+	float:right !important;
+	}
+/**/
+header{
+	width:100%;
+	float:left;
+	position:fixed;
+	z-index:10;
+	background-color:#FFF;
+	padding-bottom: 5px;	
+	}
+.tit-genera{
+	width: 500px;
+	float: left;
+	font-size: 30px;
+	padding: 78px 0 0 30px;
+	font-weight: bold;
+	color: #4D4D4F;
+	}
+/**/
+.barra-logo2{
+	width:86px;
+	height:105px;
+	background-color:#C42035; 
+	float:left;
+	padding:5px 5px 5px 5px;
+	text-align:center;
+	margin:-5px 5px 0 15px;
+	}
+.section-contenido{
+	width:100%;
+	float:left;
+	height:90%;
+	margin:120px 0 0 0;
+	background-color:#E8E8E7;
+	position:absolute;  
+	}	
+.contenido-buscador{
+	width:18%;
+	float:left;
+	height:90%;
+	padding:20px 1%;
+	background-color:#D6D6D6;
+	height:100%;
+	color:#D6D6D5;
+	
+	}
+.contenido-buscador span{
+	width:100%;
+	float:left;
+	font-size:14px;
+	color:#C42035;
+	}
+.contenido-buscador label{
+	width:100%;
+	float:left;
+	color:#4D4D4F;
+	font-size:14px;
+	margin-top:7px;
+	}
+.contenido-buscador input{
+	width:96%;
+	float:left;
+	padding:2px 2%;
+	}
+.contenido-buscador select{
+	width:100%;
+	float:left;
+	padding:2px 0;
+	}	
+.Bnt-buscar{
+	width:50% !important;
+	background-color:#000;
+	color:#FFF;
+	margin:30px 25% 0 25%;
+	float:right !important;
+	text-align:center;
+	padding:10px 0 !important;
+	}	
+.contenido-layout{
+	width:76%;
+	float:left;
+	padding:30px 2%;
+	margin-left:20%;
+        position:absolute;
+	}	
+.contenido-layout h1{
+	font-size:16px;
+	color:#C42035;
+	}												

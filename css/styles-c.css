@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+font-family:Arial, Geneva, sans-serif;
+font-size:14px;
+color:#666;
+}
+.localizador{
+width:100%;
+min-height:685px;
+}
+.span_localizador {
+color: #C90046;
+float: left;
+font-family: Arial,Geneva,sans-serif;
+font-size: 20px;
+margin: 20px 0 0 35px;
+width: 90%;
+}
+#part_1{
+width:297px;
+height:610px;
+background-color:#EEEEEE;
+float:left;
+margin-top:15px;
+padding:15px 0 0 0;
+position:relative;
+}
+#part_2{
+width:331px;
+height:610px;
+float:left;
+margin-top:15px;
+padding:15px 0 0 0;
+position:relative;
+}
+#part_3{
+width:331px;
+height:610px;
+float:left;
+margin-top:15px;
+background-color:#EEEEEE;
+padding:15px 0 0 0;
+position:relative;
+}
+.concecionarios{
+width:960px;
+min-height:400px;
+margin:0 auto;
+}
+h2{
+color:#4D4D4F;
+font-size:19px;
+font-family:Arial, Geneva, sans-serif;
+text-align:center;
+margin:0 0 10px 0;
+}
+h3{
+color:#4D4D4F;
+font-size:19px;
+font-family:Arial, Geneva, sans-serif;
+text-align:left;
+margin:0 0 10px 0;
+}
+h4{
+color:#4D4D4F;
+font-size:14px;
+font-family:Arial, Geneva, sans-serif;
+margin:10px 0 10px 0;
+}
+.btn_siguiente{
+background-color:#C90046;
+padding:3px 9px;
+text-decoration:none;
+color:#FFF;
+font-size:15px;
+float:right;
+margin:10px 30px 0 0;
+}
+.btn_siguiente2{
+background-color:#C90046;
+padding:3px 9px;
+text-decoration:none;
+color:#FFF;
+font-size:15px;
+float:right;
+margin:10px 30px 0 0;
+cursor:pointer;
+}
+.ciudad{
+padding:5px 0 0 0;
+}
+.ciudad label {
+text-align: right;
+font-size:15px;
+color:#666;
+width: 350px;
+margin-left:10px;
+}
+select {
+font-family: Arial;
+font-size: 14px;
+color: #666666;
+background-color: #ffffff;
+border: 1px solid #666666;
+width: 200px;
+margin: 5px;
+}
+.sector{
+margin-top:10px;
+}
+.sector label {
+text-align: right;
+font-size:15px;
+color:#666;
+width: 350px;
+margin-left:10px;
+}
+#barra_localizador{
+font-size:15px;
+color:#666;
+background-color:#DFDFDF;
+width:100%;
+min-height:20px;
+text-align:center;
+padding:10px 0;
+clear:both;
+float:left;
+}
+#resultado{
+width:910px;
+min-height:250px;
+clear:both;
+padding:20px;
+}
+#resultado span{
+color:#C90046;
+font-family:Arial, Geneva, sans-serif;
+font-size:20px;
+margin:5px 0 0 15px;
+width:auto;
+float:left;
+}
+#resultado p{
+margin:20px 0 0 15px;
+}
+.resultado_1{
+width:915px;
+margin:10px auto;
+border-bottom:1px dashed #939598;
+clear:both;
+padding:10px 0;
+min-height:120px;
+float:left;
+}
+.r_conse{
+width:238px;
+height:116px;
+float:left;
+padding:0 15px 0 0;
+font-size:12px;
+}
+.info{
+font-size:15px;
+color:#666666;
+}
+.r_servi{
+width:377px;
+min-height:116px;
+float:left;
+padding:0 15px;
+border-left:1px dashed #939598;
+border-right:1px dashed #939598;
+}
+.r_conta{
+width:238px;
+height:116px;
+float:left;
+padding:0 0 0 15px;
+font-size:12px;
+}
+.tit-serv{
+margin:0 !important;
+padding:0 !important;
+font-size:12px !important;
+}
+.ancho-td{
+width:75px !important;
+}
+.ancho-txt{
+text-align:left;
+}
+.eje-placa{
+font-style:italic;
+font-size:11px !important;
+margin:0 !important;
+color:#666 !important;
+}
+.errorMessage{
+position: absolute !important;
+font-size: 9px !important;
+color: #C90046 !important;
+margin-top: 25px;clear:both;
+}
+.logotipo2{
+float:left;
+position:absolute;
+top:0;
+left:60px;
+}

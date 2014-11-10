@@ -1,0 +1,249 @@
+@media screen and (max-width: 850px) {
+.tit-botones {
+font-size: 12px;
+}	
+}
+@media screen and (max-width: 789px) {
+.tit-botones {
+font-size: 10px;
+}	
+.logo-nissan {
+width: 75px;
+}
+#menu-mobile {
+width: 88%;
+}
+}
+@media screen and (max-width: 766px) {
+#menu-mobile {
+width: 87%;
+}
+#menu-mobile li {
+padding: 7px 15px;
+font-size: 0.9em;
+}
+}
+@media screen and (max-width: 720px) {
+.perfil-auto-der {
+width: 96%;
+float: left;
+padding: 0 2%;
+}
+.perfil-auto-izq {
+width: 96%;
+padding: 0 2%;
+float: left;
+}
+.links-a{
+	width:35%;
+	padding:0 2.5%;
+	}
+.autosimagen-img{
+	width:60%;
+	}	
+.botoneras{
+	width: 99%;
+	margin: -1.7% 0.5% 0 0.5%;
+	}	
+.formularios-mod2 {
+width: 98%;
+margin: 20px 1% 20px 1%;
+float: left;
+}	
+/* MENU MOBILE */
+#menu-mobile{
+	display:none;
+	}
+#btn-mobile{
+	display:block;
+	}
+#menu-mobile{
+	width:100%;
+	top:60px;
+	margin:0;
+	position:absolute;
+	background-color:#FFF;
+	z-index:5000;
+	display:block;/*none*/
+}	
+#menu-mobile li {
+	float: left;
+	display: inline-block;
+	padding: 10px 0;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid #ACACAC;
+	font-size: 1em;
+	width:100%;
+}	
+#submenu-mobile-autos li{
+	width:auto !important;
+	}	
+#menu-vehiculos {
+position: relative;
+top: 0;
+left: 0;
+margin: 10px 0 0 0;
+}	
+#menu-vehiculos li{
+	border-top:none !important;	
+	}
+.submenus-mobile{
+	margin: 8px 0 0 0;
+	position:relative;
+	padding:0;
+	width:100%;
+	}
+.submenus-mobile li:last-child{
+	border-bottom:1px solid #ACACAC;
+	}			
+}
+@media screen and (max-width: 603px) {
+.links-banners{
+	width:49.5%;
+	}
+.links-banners2{
+	width:49.5%;
+	}
+.separador-b2{
+	margin-right:0%;
+	}
+.links-social{
+	width:42.5%;
+	padding:0 0 0 7%;
+	}
+	
+.tit-botones {
+font-size: 12px;
+}	
+
+.cont-inputs-lc{
+	width:95%;
+	margin:0 5% 10px 5v%;
+	}	
+.con-autos-gama{
+	width:45%;
+	float:left;
+	margin:0 2.5%;
+	}
+.botoneras {
+width: 98%;
+float: left;
+margin: -1.7% 2% 0 2%;
+}	
+.logo-nissan{
+	width:70px;
+	}	
+		
+}
+@media screen and (max-width: 580px) {
+.copyright-f {
+font-size: 9px;
+}	
+.tit-links {
+font-size: 1.5em;
+}
+.direc-concecionarios{
+	width:98%;
+	min-height:50px;
+	}
+.serv-concecionarios{
+	width:98%;
+	min-height:50px;
+	}
+.formularios-mod{
+	width:98%;
+	margin:50px 1% 20px 1%; 
+	}
+	
+.botoneras{
+width: 100%;
+margin: -1.7% 0;
+}
+.botoneras ul li{
+	width:100%;
+	margin:0 0 5px 0;
+	background-color:#636466;
+	}
+.botoneras ul li img{
+	width:70%;
+	margin:0 15%;
+	}
+.modulo-int-izq{
+	width:80%;
+	float:left;
+	padding:0 10%;
+	}
+.modulo-int-der{
+	width:96%;
+	float:left;
+	margin:20px 2% 0 2%;
+	}			
+}
+@media screen and (max-width: 420px) {
+.tit-botones {
+font-size: 10px;
+top: 38%;
+padding: 5px 0;
+}
+.info-der-social span {
+font-size: 12px;
+}	
+.info-der-social a:visited, .info-der-social a:link {
+font-size: 10px;
+}
+.links-social{
+	width:45.5%;
+	padding:0 0 0 3%;
+	}
+.links-social img {
+width: 30%;
+}
+.logo-nissan {
+width: 70px;
+margin: 0 0 0 4%;
+}
+.con-autos-gama{
+	width:95%;
+	float:left;
+	margin:0 2.5%;
+	}
+.submenu-autos li{
+	width:49%;
+	float:left;
+	margin: 0 0.5% 5px 0.5%;
+	list-style:none;
+	}	
+.submenu-autos li:last-child{
+	margin: 0 0.5% 5px 0.5%;
+	}
+.img-botones-links{
+	width:49%;
+	padding:0 0.5% 0 0.5%;
+	}
+.img-botones-links2{
+	width:49%;
+	padding:0 0.5% 0 0.5%;
+	}
+.submenu-corporativas{
+	width:96%;
+	padding:0 2%;
+	}
+.info-corporativas{
+	width:96%;
+	padding:0 2%;
+	}								
+}
+@media screen and (max-width: 360px) {
+.links-a{
+	width:70%;
+	padding:0 15% 20px 15%;
+}
+.autosimagen-img{
+	width:100%;
+}
+.botoneras ul li img{
+	width:100%;
+	margin:0;
+	}	
+	}

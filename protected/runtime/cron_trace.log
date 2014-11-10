@@ -1,0 +1,45 @@
+2014/11/10 03:00:10 [trace] [system.CModule] Loading "log" application component
+2014/11/10 03:00:12 [trace] [system.db.ar.CActiveRecord] Quotation.findAllByAttributes()
+2014/11/10 03:00:12 [trace] [system.CModule] Loading "db" application component
+2014/11/10 03:00:12 [trace] [system.db.CDbConnection] Opening DB connection
+2014/11/10 03:00:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `quotation`
+2014/11/10 03:00:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `quotation`
+2014/11/10 03:00:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `quotation` `t` WHERE `t`.`review`=:yp0
+2014/11/10 03:00:15 [trace] [system.db.ar.CActiveRecord] Suggestion.findAllByAttributes()
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `suggestion`
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `suggestion`
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `suggestion` `t` WHERE `t`.`review`=:yp0
+2014/11/10 03:00:15 [trace] [system.db.ar.CActiveRecord] Replacement.findAllByAttributes()
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `replacement`
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `replacement`
+2014/11/10 03:00:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `replacement` `t` WHERE `t`.`review`=:yp0
+2014/11/10 06:00:05 [trace] [system.CModule] Loading "log" application component
+2014/11/10 06:00:06 [trace] [system.db.ar.CActiveRecord] Quotation.findAllByAttributes()
+2014/11/10 06:00:06 [trace] [system.CModule] Loading "db" application component
+2014/11/10 06:00:06 [trace] [system.db.CDbConnection] Opening DB connection
+2014/11/10 06:00:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `quotation`
+2014/11/10 06:00:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `quotation`
+2014/11/10 06:00:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `quotation` `t` WHERE `t`.`review`=:yp0
+2014/11/10 06:00:08 [trace] [system.db.ar.CActiveRecord] Suggestion.findAllByAttributes()
+2014/11/10 06:00:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `suggestion`
+2014/11/10 06:00:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `suggestion`
+2014/11/10 06:00:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `suggestion` `t` WHERE `t`.`review`=:yp0
+2014/11/10 06:00:09 [trace] [system.db.ar.CActiveRecord] Replacement.findAllByAttributes()
+2014/11/10 06:00:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `replacement`
+2014/11/10 06:00:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `replacement`
+2014/11/10 06:00:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `replacement` `t` WHERE `t`.`review`=:yp0
+2014/11/10 09:00:09 [trace] [system.CModule] Loading "log" application component
+2014/11/10 09:00:12 [trace] [system.db.ar.CActiveRecord] Quotation.findAllByAttributes()
+2014/11/10 09:00:12 [trace] [system.CModule] Loading "db" application component
+2014/11/10 09:00:12 [trace] [system.db.CDbConnection] Opening DB connection
+2014/11/10 09:00:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `quotation`
+2014/11/10 09:00:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `quotation`
+2014/11/10 09:00:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `quotation` `t` WHERE `t`.`review`=:yp0
+2014/11/10 09:00:13 [trace] [system.db.ar.CActiveRecord] Suggestion.findAllByAttributes()
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `suggestion`
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `suggestion`
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `suggestion` `t` WHERE `t`.`review`=:yp0
+2014/11/10 09:00:13 [trace] [system.db.ar.CActiveRecord] Replacement.findAllByAttributes()
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `replacement`
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `replacement`
+2014/11/10 09:00:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `replacement` `t` WHERE `t`.`review`=:yp0

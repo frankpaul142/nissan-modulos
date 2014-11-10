@@ -1,0 +1,905 @@
+/* RESETEO PAGINA */
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+/**/
+body{
+	font-family:Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	}
+img{
+	width:100%;
+	}
+/**/
+header{
+	width:100%;
+	height:60px;
+	background-color:#FFF;
+	position:fixed;
+	top:0;
+	z-index:10000;
+	}
+.logo-nissan{
+	width:86px;
+	float:left;
+	margin:0 0 0 2%;
+	position:relative;
+	z-index:500000;
+	}	
+.banner-principal{
+	width:100%;
+	float:left;
+	margin:60px 0 0 0;
+	position:relative;
+	}	
+/**/
+#menu-mobile{
+	width:86%;
+	float:left;
+	margin:30px 0 0 0;
+	}
+#menu-mobile li{
+	float:left;
+	display:inline-block;
+	padding:7px 20px;
+	font-weight:bold;
+	}
+#menu-mobile li a:link, #menu-mobile li a:visited{
+	color:#000;
+	}	
+.submenu-mobile{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:60px;
+	background-color:#EEEEEE;
+	padding:10px 0;
+	}	
+
+	
+/* SUBMENU AUTOS */
+
+							
+/**/	
+.cont-pagina{
+	width:100%;
+	float:left;
+	}
+.cont-links{
+	width:98%;
+	float:left;
+	padding:0 1%;
+	}	
+.links-banners{
+	width:24.2%;
+	float:left;
+	position:relative;
+	margin-top:1%;
+	}
+.links-banners2{
+	width:24.3%;
+	height:100%;
+	background-color:#063;
+	float:left;
+	position:relative;
+	margin-top:1%;
+	}	
+.tit-banners{
+	width:100%;
+	text-align:center;
+	color:#fff;
+	background-color:#636466;
+	font-size:14px;
+	padding:7px 0;
+	float:left;
+	margin:0 0 5px 0;
+	}
+.links-banners img{
+	float:left;
+	}
+.separador-b{
+	margin-left:1%;
+	}
+.separador-b2{
+	margin-right:1%;
+	}		
+.tit-links{
+	width:95%;
+	float:left;
+	padding:5px 0 0 5%;
+	font-size:2em;
+	color:#636466;
+	font-weight:bold;
+	}
+.tit-botones{
+	width:100%;
+	background:rgba(17,17,17,0.7);
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:14px;
+	position:absolute;
+	top:42%;
+	left:0;
+	text-align:center;
+	padding:7px 0;	
+	}
+/**/
+footer{
+	width:100%;
+	float:left;
+	margin:30px 0 0 0;
+	}
+.links-social{
+	width:19.8%;
+	float:left;
+	border-left:1px solid #999;
+	padding:0 0 0 5%;
+	margin:0 0 30px 0;
+	}	
+.links-social img{
+	width:20%;
+	float:left;
+	}
+.info-der-social{
+	width:60%;
+	float:left;
+	margin:0 0 0 10px;
+	
+	}
+.info-der-social span{
+	width:100%;
+	color:#636466;
+	font-size:1.2em;
+	float:left;
+	}
+.info-der-social a:visited, .info-der-social a:link{
+	width:60%;
+	padding:3px 15px;
+	background-color:#C41733;
+	color:#FFF;
+	float:left;
+	margin:3px 0;
+	text-align:center;
+	}
+.copyright-f{
+	width:100%;
+	float:left;
+	clear:both;
+	background-color:#EEEEEE;
+	border-top:1px solid #666;
+	padding:8px 0;
+	text-align:center;
+	color:#333;
+	font-size:12px;
+	}
+/**/
+#btn-mobile{
+	width:40px;
+	float:right;
+	margin:12px 15px 0 0;
+	display:none;
+	}	
+/* MODULOS */
+.modulos{
+	width:96%;
+	padding:20px 2%;
+	}	
+.modulos h1{
+	width:100%;
+	float:left;
+	font-size:1.5em;
+	color:#636466;
+	margin:0 0 15px 0;
+	}	
+.cont-formulario{
+	width:100%;
+	background-color:#EEEEEE;
+	border-top:1px solid #333;
+	margin:20px 0 20px 0;
+	float:left;
+	padding:0 0 30px 0;
+	}
+.botoneras{
+	width:84%;
+	float:left;
+	margin:-1.7% 8% 0 8%;
+	}
+.botoneras ul{
+	width:100%;
+	float:left;
+	}			
+.botoneras ul li{
+	width:31.3%;
+	float:left;
+	margin:0 1%;
+	list-style:none;
+	}	
+.seleccion{
+	background-color:#c41733 !important;	
+	}	
+.formularios-mod{
+	width:60%;
+	margin:50px 20% 20px 20%; 
+	float:left;
+	}	
+.cont-inputs{
+	width:100%;
+	float:left;
+	margin:0 0 10px 0;
+	}
+.cont-inputs2{
+	width:90%;
+	float:left;
+	margin:10px 5% 10px 5%;
+	}	
+.cont-inputs2 input{
+	width:100%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	}
+.cont-inputs2 select{
+	width:100%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	}		
+.cont-inputs2 textarea{
+	width:100%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	min-height:100px;
+	}	
+.cont-inputs label, .cont-inputs-lc label{
+	width:35%;
+	float:left;
+	text-align:right;
+	color:#666666;
+	font-size:1.1em;
+	margin: 5px 0 0 0;
+	}	
+.cont-inputs select, .cont-inputs-lc select{
+	width:59%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	}
+.cont-inputs input, cont-inputs-lc input{
+	width:55%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	}
+.error-mg{
+	width:59%;
+	float:left;
+	clear:both;
+	color:#C41733;
+	font-size:0.8em;
+	margin:0 0 0 37%;
+	}
+.ejem-txt{
+	width:59%;
+	float:left;
+	clear:both;
+	font-size:0.9em;
+	color:#666;
+	margin:3px 0 0 37%;
+	}	
+.btns-submit{
+	width:25%;
+	background-color:#C41733;
+	color:#FFF;
+	float:right;
+	padding:5px 0;
+	clear:both;
+	}																	
+.formularios-mod h2{
+	width:100%;
+	background-color:#FFF;
+	font-size:1.4em;
+	color:#666666;
+	}
+.modulos h2{
+	width:100%;
+	float:left;
+	font-size:1.5em;
+	color:#636466;
+	}	
+.modulos h3{
+	width:100%;
+	float:left;
+	font-size:1.5em;
+	color:#636466;
+	}		
+/***/
+.listadeconcecionarios-mod {
+	width: 80%;
+	margin: 20px 10% 0px 10%;
+	float: left;
+	}
+.cont-inputs-lc{
+	width:50%;
+	float:left;
+	margin:0 0 10px 0;
+	}
+.cont-inputs-lc label{
+	width:25%;
+	float:left;
+	text-align:right;
+	color:#666666;
+	font-size:1.1em;
+	margin: 5px 0 0 0;
+	}	
+.cont-inputs-lc input, .cont-inputs-lc select{
+	width:65%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	border-radius:4px;
+	background-color:#EEEEEE;
+	padding:2px 2%;
+	border:1px solid #666666;
+	}	
+.cont-listaconcecionarios{
+	width:100%;
+	background-color:#EEEEEE;
+	border-top:1px solid #333;
+	margin:20px 0 20px 0;
+	float:left;
+	padding:0 0 20px 0;
+	}
+.info-concecionario{
+	width:100%;
+	float:left;
+	}					
+.tit-concesionarios{
+	background-color:#404040;
+	color:#FFF;
+	font-size:16px;
+	width:95%;
+	padding:7px 2.5% 7px 2.5%;	
+	}	
+.direc-concecionarios{
+	width:24%;
+	padding:10px 1%;
+	float:left;
+	min-height:130px;
+	}
+.serv-concecionarios{
+	width:46%;
+	padding:10px 1%;
+	float:left;
+	background-color:rgba(147,149,152,0.1);
+	min-height:130px;
+	}
+.direc-concecionarios span{
+	color:#C41733;
+	}	
+.direc-concecionarios h1{
+	color:#404040;
+	font-size:1.2em;
+	}
+.cont-servicio{
+	width:100%;
+	float:left;
+	}	
+.cont-servicio img{
+	width:25%;
+	float:left;
+	}
+.txt-servicio{
+	width: 73%;
+	margin: 0 0 0 2%;
+	float: left;
+	}	
+.txt-servicio span{
+	color:#C41733;
+	}
+/* GAMA DE AUTOS */
+.cont-gamaautos{
+	width:100%;
+	background-color:#EEEEEE;
+	padding:40px 0 20px 0;
+	margin:60px 0 0 0;
+	float:left;
+	border-top: 1px solid #666;
+	}
+.con-autos-gama{
+	width:28%;
+	float:left;
+	margin:0 2.5%;
+	}	
+.link-perfil-gama{
+	width:33.3%;
+	float:left;
+	}
+/* PERFIL AUTO */
+.perfil-auto-der{
+	width:26%;
+	float:left;
+	padding:0 2%;
+	}
+.perfil-auto-izq{
+	width:68%;
+	padding:0 1%;
+	float:left;
+	}
+.autosimagen-img{
+	width:100%;
+	float:left;
+	}	
+.gama-colores{
+	width:100%;
+	float:left;
+	padding:5px 0;
+	}
+.gama-colores h1{
+	width:100%;
+	padding-bottom:5px;
+	color:#C41733;
+	}		
+.color1-auto1{
+	width:35px;
+	height:35px;
+	margin:5px 1% 5px;
+	background-color:#000;
+	float:left;
+	}
+.links-a{
+	width:100%;
+	float:left;
+	}	
+.btn-links-autos{
+	width:70%;
+	padding:0 15%;
+	background-color:#C41733;
+	margin:10px 0 0 0;
+	float:left;
+	}
+.submenu-autos{
+	width:100%;
+	float:left;
+	}
+.submenu-autos li{
+	width:24.6%;
+	float:left;
+	margin: 0 0.5% 0 0;
+	list-style:none;
+	}	
+.submenu-autos li:last-child{
+	margin:0;
+	}	
+.submenu-autos li a:visited, .submenu-autos li a:link{
+	width:100%;
+	float:left;
+	background-color:#C41733;
+	color:#FFF;
+	text-align:center;
+	padding:7px 0;
+	font-size:12px;
+	}
+/**/
+#exteriores-autos, #interiores-autos, #seguridad-autos, #tecnica-autos{
+	width:100%;
+	float:left;
+	margin:5px 0;
+	}
+#interiores-autos, #seguridad-autos, #tecnica-autos{
+	display:none;
+	}		
+.banner-autos{
+	width:100%;
+	float:left;
+	}
+.cont-autos{
+	width:100%;
+	float:left;
+	margin:7px 0;
+	color:#666666;
+	font-size:1.1em;
+	}	
+.tablainformativa{
+	width:100%;
+	float:left;
+	}
+.tit-modelo{
+	background-color:#636466;
+	color:#FFF;
+	width:60%;
+	padding:6px 0 5px 40%;
+	text-align:center;
+	text-transform:uppercase;
+	}	
+.tit-caracteristica{
+	background-color:#636466;
+	color:#FFF;
+	width:38%;
+	padding:6px 1% 5px 1%;
+	text-align:center;
+	text-transform:uppercase;
+	float:left;
+	}
+#tit-modelos{
+	width:60%;
+	background-color:#EEEE;
+	color:#666;
+	float:left;
+	position:relative;
+	}	
+#tit-modelos li{
+	display:inline-block;
+	text-align:center;
+	float:left;
+	outline:#999 solid thin;
+	padding:5px 0;
+	}	
+#tit-modelos li a:visited, #tit-modelos li a:hover{
+	color:#666;
+	}	
+#modelo1, #modelo2, #modelo3{
+	width:100%;
+	float:left;
+	}	
+#modelo2, #modelo3{
+	display:none;
+	}	
+.cont-caracteristica{
+	width:100%;
+	float:left;
+	background-color:#EEEE;
+	}
+.cont-caracteristica2{
+	width:100%;
+	float:left;
+	background-color:#d8d8d9;
+	}		
+.tit-caracteristicaint{
+	color:#666666;
+	width:38%;
+	padding:5px 1% 5px 1%;
+	text-align:center;
+	text-transform:uppercase;
+	float:left;
+	font-size:0.8em;
+	}
+.det-caracteristicaint, .det-caracteristicaint2{
+	width:58%;
+	color:#fff;
+	padding:5px 1% 5px 1%;
+	float:left;
+	position:relative;
+	text-align:center;
+	text-transform:uppercase;
+	font-size:0.8em;
+	}	
+.det-caracteristicaint{
+	background-color:#636466;
+	}	
+.det-caracteristicaint2{
+	background-color:#5a5b5d;
+	}
+#modulo-fase1, #modulo-fase2, #modulo-fase3{
+	width:100%;
+	float:left;
+	}
+.cont-checks{
+	width:50%;
+	padding:0 25%;
+	}	
+.cont-inputs input[type='checkbox']{
+	width:5%;
+	float:left;
+	}
+/* PRUEBA DE MANEJO */	
+.modulo-int-izq{
+	width:36%;
+	float:left;
+	padding:0 2%;
+	}
+.modulo-int-der{
+	width:60%;
+	float:left;
+	margin:20px 0 0 0;
+	}
+.modulo-int-izq img{
+	width:100%;
+	float:left;
+	}		
+.n-auto-modulos{
+	width:96%;
+	float:left;
+	padding:5px 2%;
+	}	
+.n-auto-modulos{
+	background-color:#C41733;
+	color:#FFF;
+	width:100%;
+	padding:5px 0;
+	text-align:center;
+	font-size:1.2em;
+	}	
+.formularios-mod2 {
+width: 80%;
+margin: 20px 10% 20px 10%;
+float: left;
+}	
+.btn-modelos{
+	width:50%;
+	float:left;
+	text-align:center;
+	outline:#CCC;
+	margin:10px 0;
+	}
+.btn-modelos a:link, .btn-modelos a:visited{
+	color:#636466;
+	}
+.txt-envio{
+	width:90%;
+	float:left;
+	margin:0 5%;
+	text-align:center;
+	color:#666;
+	}	
+.img-botones-links{
+	width:30%;
+	float:left;
+	padding:0 2% 0 18%;
+	margin:30px 0 0 0;
+	}
+.img-botones-links2{
+	width:30%;
+	float:left;
+	padding:0 7.5% 0 2%;
+	margin:30px 0 0 0;
+	}			
+.trabajos-realizar{
+	width:100%;
+	float:left;
+	}	
+/**/
+.cont-corporativas{
+	width:100%;
+	float:left;
+	}
+.submenu-corporativas{
+	width:36%;
+	padding:0 2%;
+	float:left;
+	background-color: #EEEEEE;
+	}
+.submenu-corporativas ul{
+	width:100%;
+	float:left;
+	padding:10px 0;
+	}
+.submenu-corporativas ul li{
+	width:100%;
+	list-style:none;
+	border-bottom:1px solid #CCC;
+	float:left;
+	}	
+.submenu-corporativas ul li a:link, .submenu-corporativas ul li a:hover{
+	width:100%;
+	float:left;
+	padding:7px 0;
+	text-align:center;
+	font-size:1em;
+	color:#666;
+	}
+.info-corporativas{
+	width:54%;
+	padding:0 2%;
+	float:left;
+	font-size:1em;
+	color:#666;
+	}
+.info-corporativas h1{
+	color:#666;
+	font-size:1.3em;
+	width:100%;
+	float:left;
+	padding:20px 0;
+	}															
+/**/
+.con-autos{
+	width:210px;
+	float:left;
+	}
+.n-auto{
+	width:100%;
+	float:left;
+	padding:7px 0;
+	font-size:12px;
+	background-color:#636466;
+	color:#FFF;
+	margin:0 0 5px 0;
+	text-align:center;
+	text-transform:uppercase;
+	}
+.links-autos{
+	width:100%;
+	float:left;
+	}
+.link-perfil{
+	width:33%;
+	float:left;
+	}
+/* SUBMENUS */
+#menu-vehiculos{
+	position:fixed;
+	z-index:5000;
+	top:60px;
+	left:0;
+	width:100%;
+	float:left;
+	background-color:#eeeeee;
+	padding:20px 0 10px 0;
+	display:none;
+	}
+#back-menu-autos{
+	width:25px;
+	float:left;
+	display:none;
+	}
+#next-menu-autos{
+	width:25px;
+	float:left;
+	}	
+.con-btn-autos{
+	width: 25px;
+	height: 95px;
+	position: absolute;
+	z-index: 5000;
+	top: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	padding: 132px 2.5px 0 2.5px;
+	}	
+.con-btn-autos2{
+	width:25px;
+	height:95px;
+	position:absolute;
+	z-index:5000;
+	top: 0;
+	right: 0;
+	background-color:#EEEEEE;
+	padding:132px 2.5px 0 2.5px;
+	}
+/**/						
+#submenu-mobile-autos{
+	position:relative;
+	left:30px;
+	top:0;
+	background-color:#EEEEEE;
+	padding:2px 10px;
+	max-height:220px;
+	float:left;
+	}		
+#submenu-mobile-autos li{
+	list-style:none;	
+	float:left;
+	padding:7px 20px 0 0 !important;
+	}
+/**/
+.submenus-mobile{
+	width: 100%;
+	float: left;
+	background-color: #eeeeee;
+	margin: 10px 0 0 0;
+	position: absolute;
+	margin: 8px 0 0 0;
+	left: 0;
+	padding: 0;
+	display:none;
+	}
+.submenus-mobile li{
+	width:100%;
+	text-align:center;
+	float: left;
+	display: inline-block;
+	padding: 10px 20px !important;
+	border-bottom:1px solid #ACACAC;
+	}		
+
+.submenus-mobile li a:visited, .submenus-mobile li a:link{
+	color: #333 !important;
+	}	
+#cont-negro-out{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.8);
+	z-index:0;
+	display:none;
+	}	
+/**/
+.cont-iframes{
+	width:100%;
+	float:left;
+	}				
+
+
+/* CSS NUEVOS */
+.carros-check{
+	width:31.1%;
+	float:left;
+	padding:0 1%;
+	}
+.carros-check img{
+	float:left;
+	}	
+.carros-check input[type="checkbox"]{
+	width:10%;
+	float:left;
+	}	
+.carros-check label{
+	width:80%;
+	margin:0 0 0 2%;
+	float:left;
+	font-size:1.1em;
+	background-color:#636466;
+	padding:2px 2%;
+	color:#FFF;
+	text-align:center;
+	}	
+.btns-submit-sc{
+	width:25%;
+	background-color:#C41733;
+	color:#FFF;
+	float:right;
+	padding:5px 0;
+	clear:both;
+	margin:20px 0 0 0;
+	}
