@@ -48,6 +48,7 @@ return array(
 	
 	)), 'reporte'=>array(),
 		'catalogo'=>array(),
+		'manejo'=>array(),
 	),
 
 	// application components
