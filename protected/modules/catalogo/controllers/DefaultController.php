@@ -2,6 +2,8 @@
 
 class DefaultController extends Controller
 {
+	public $layout="//layouts/module";
+	
 	public function actionIndex()
 	{
         $client = new Client;
