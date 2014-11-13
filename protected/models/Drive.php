@@ -54,8 +54,8 @@ class Drive extends CActiveRecord
 		return array(
 			'client' => array(self::BELONGS_TO, 'Client', 'client_id'),
 			'concessioner' => array(self::BELONGS_TO, 'Concessioner', 'concessioner_id'),
-			'vehicleVersionId2' => array(self::BELONGS_TO, 'VehicleVersion', 'vehicle_version_id2'),
-			'vehicleVersion' => array(self::BELONGS_TO, 'VehicleVersion', 'vehicle_version_id'),
+			'vehicleversion2' => array(self::BELONGS_TO, 'VehicleVersion', 'vehicle_version_id2'),
+			'vehicleversion' => array(self::BELONGS_TO, 'VehicleVersion', 'vehicle_version_id'),
 		);
 	}
 

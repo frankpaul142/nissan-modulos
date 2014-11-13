@@ -3,7 +3,7 @@
 class DefaultController extends Controller
 {
 	public $layout="//layouts/module";
-	
+
 	public function actionIndex()
 	{
         $client = new Client;
@@ -34,7 +34,7 @@ class DefaultController extends Controller
 	        		$cc=new ClientCatalog();
 	        		$cc->client_id=$client->id;
 	        		$cc->catalog_id=$_POST['selection'][$i];
-	        		$cc->date=date("Y-m-d H:i:s");
+	        		$cc->creation_date=date("Y-m-d H:i:s");
 	        		$cc->isNewRecord=true;
 	        		if(!$cc->save()){
 	        			$error=true;

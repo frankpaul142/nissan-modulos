@@ -148,7 +148,7 @@
                         </div>
                         <div class="cont-inputs">
                             <label>Cédula:</label>
-                            <?php echo $form->textField($client,'identity'); ?>
+                            <?php echo $form->textField($client,'identity',array('class'=>'number')); ?>
                             <?php echo $form->error($client,'identity',array('class'=>'error-mg')); ?>
                         </div>
                         <div class="cont-inputs">
@@ -158,12 +158,12 @@
                         </div>
                         <div class="cont-inputs">
                             <label>Teléfono:</label>
-                            <?php echo $form->textField($client,'phone'); ?>
+                            <?php echo $form->textField($client,'phone',array('class'=>'number', 'placeholder'=>'Ej: 022345678')); ?>
                             <?php echo $form->error($client,'phone',array('class'=>'error-mg')); ?>
                         </div>
                         <div class="cont-inputs">
                             <label>Celular:</label>
-                            <?php echo $form->textField($client,'cellphone'); ?>
+                            <?php echo $form->textField($client,'cellphone',array('class'=>'number', 'placeholder'=>'Ej: 0997854321')); ?>
                             <?php echo $form->error($client,'cellphone',array('class'=>'error-mg')); ?>
                         </div>
                         <div class="cont-inputs">

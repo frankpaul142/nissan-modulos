@@ -71,19 +71,20 @@ class DefaultController extends Controller
             $drive->client_id=$client->primaryKey;
 			$drive->creation_date=date("Y-m-d H:i:s");
             if($drive->save()){
-				/*$quot= Quotation::model()->findByPk( $quotation->primaryKey);
+				$driv= Drive::model()->findByPk( $drive->primaryKey);
                 $message = new YiiMailMessage;
-                $message->view = 'cotizador';
-                $message->setBody(array("client"=>$client,"quotation"=>$quot),'text/html');
-				$message->setSubject('Prospecto para Cotización');
-              	foreach($quot->concessioner->emails as $email){
-                 	if($email->type=="QUOTATION"){
+                $message->view = 'pruebamanejo';
+                $message->setBody(array("client"=>$client,"drive"=>$driv),'text/html');
+				$message->setSubject('Solicitud Prueba de Manejo');
+              	foreach($driv->concessioner->emails as $email){
+                 	if($email->type=="DRIVE"){
                     	$message->addTo($email->description);
                		}
                	}
-			    // $message->addTo("franklin.paula@share.com.ec");
+			    //$message->addTo("franklin.paula@share.com.ec");
+			    //$message->addTo("rodney.ledesma@share.com.ec");
                 $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
-                Yii::app()->mail->send($message);*/
+                Yii::app()->mail->send($message);
                 echo json_encode(true);
             }
             else{

@@ -1,7 +1,7 @@
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 		<head>
 			<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-			<title>Nissan Ecuador - Solicitud de Cotizaciones</title>
+			<title>Nissan Ecuador - Prueba de manejo</title>
 			<!--[if lte IE 8]>
 				<link rel="stylesheet" type="text/css" href="ie8-media.css" />
 			<![endif]-->
@@ -14,7 +14,7 @@
 			<tbody>
 				<tr>
 					<td colspan="2">  
-						<h1>Prospecto para Cotizaci&oacute;n</h1>
+						<h1>Prueba de Manejo</h1>
 						
 					</td>
 				</tr>
@@ -22,11 +22,11 @@
 
 				<tr>
 		<td align="right" style="width:30%"><b>Fecha: </b></td><td style="width:70%"><?php
-					echo  $quotation->creation_date ;
+					echo  $drive->creation_date ;
                                         ?></td>
 				</tr>
 				<tr>
-					<td align="right" style="width:30%"><b>Requerimiento: </b></td><td style="width:70%">Cotizaci&oacute;n</td>
+					<td align="right" style="width:30%"><b>Requerimiento: </b></td><td style="width:70%">Prueba de manejo</td>
 				</tr>
                                 <tr>
 					<td align="right" style="width:30%"><b>C&eacute;dula: </b></td><td style="width:70%"><?php echo $client->identity; ?></td>
@@ -56,16 +56,13 @@
 					<td align="right" style="width:30%"><b>Hora de contacto: </b></td><td style="width:30%"><?php echo $client->preference_contact2; ?></td>
 				</tr>
 				<tr>
-					<td align="right" style="width:30%"><b>Concesionario donde desea ser atendido: </b></td><td><?php echo $quotation->concessioner->name; ?></td>
+					<td align="right" style="width:30%"><b>Concesionario donde desea ser atendido: </b></td><td><?php echo $drive->concessioner->name; ?></td>
 				</tr>
 				<tr>
-					<td align="right" style="width:30%"><b>Preferencia 1: </b></td><td><?php echo $quotation->vehicleversion->vehicle->name." ".$quotation->vehicleversion->reference; ?></td>
+					<td align="right" style="width:30%"><b>Preferencia 1: </b></td><td><?php echo $drive->vehicleversion->vehicle->name." ".$drive->vehicleversion->reference; ?></td>
 				</tr>
 				<tr>
-					<td align="right" style="width:30%"><b>Preferencia 2: </b></td><td><?php echo $quotation->vehicleversion2->vehicle->name." ".$quotation->vehicleversion2->reference;  ?></td>
-				</tr>
-				<tr>
-					<td align="right" style="width:30%"><b>Tiempo de adquisici&oacute;n: </b></td><td> <?php echo $quotation->time;  ?></td>
+					<td align="right" style="width:30%"><b>Preferencia 2: </b></td><td><?php echo $drive->vehicleversion2->vehicle->name." ".$drive->vehicleversion2->reference;  ?></td>
 				</tr>
 				<tr>
 <!--					<td align="right" style="width:30%"><b>Hora de Preferencia para su Atenci&oacute;n: </b></td><td>'.$data['user_hour_contact'].'</td>

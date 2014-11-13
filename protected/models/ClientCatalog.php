@@ -26,11 +26,11 @@ class ClientCatalog extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('client_id, catalog_id, date', 'required'),
+			array('client_id, catalog_id, creation_date', 'required'),
 			array('client_id, catalog_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('client_id, catalog_id, date', 'safe', 'on'=>'search'),
+			array('client_id, catalog_id, creation_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +53,7 @@ class ClientCatalog extends CActiveRecord
 		return array(
 			'client_id' => 'Client',
 			'catalog_id' => 'Catalog',
-			'date' => 'Date',
+			'creation_date' => 'Date',
 		);
 	}
 
