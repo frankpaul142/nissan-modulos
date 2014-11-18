@@ -20,7 +20,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    font-size:17px;
     vertical-align:baseline;
     background:transparent;
 }
@@ -873,6 +873,7 @@ float: left;
 
 /* CSS NUEVOS */
 .carros-check{
+	min-height: 33%;
 	width:31.1%;
 	float:left;
 	padding:0 1%;
@@ -893,6 +894,8 @@ float: left;
 	padding:2px 2%;
 	color:#FFF;
 	text-align:center;
+	height: auto;
+	min-height: 33px;
 	}	
 .btns-submit-sc{
 	width:25%;

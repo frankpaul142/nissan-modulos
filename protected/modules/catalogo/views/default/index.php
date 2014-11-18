@@ -70,24 +70,6 @@
                             <?php echo $form->textField($client,'cellphone',array('class'=>'number', 'placeholder'=>'Ej: 0997854321')); ?>
                             <?php echo $form->error($client,'cellphone',array('class'=>'error-mg')); ?>
                         </div>
-                        <div class="cont-inputs">
-                            <label>Hora de Contacto:</label>
-                            <select name="Client[preference_contact2]" class="select-n">
-	                            <option value="8:00 am - 10:00 am"> 8:00 am - 10:00 am </option>  
-	                            <option value="10:00 am - 12:00 pm"> 10:00 am - 12:00 pm </option>
-	                            <option value="12:00 pm - 2:00 pm"> 12:00 pm - 2:00 pm </option>
-	                            <option value="2:00 pm - 4:00 pm"> 2:00 pm - 4:00 pm </option>
-	                            <option value="4:00 pm - 6:00 pm"> 4:00 pm - 6:00 pm </option>
-	                        </select>
-                        </div>
-                        <div class="cont-inputs">
-                            <label>Contactar por:</label>
-                            <?php 
-                   				$condition=  array('E-mail' => 'E-mail', 'Teléfono' => 'Teléfono', 'Email y teléfono' => 'Email y Teléfono');
-                      	 		echo $form->dropDownList($client,'preference_contact', $condition, array('prompt'=>'Selecciona una opción','class'=>'select-n')); 
-                     		?> 
-                            <?php echo $form->error($client,'preference_contact',array('class'=>'error-mg')); ?>
-                        </div>
                         <?php echo CHtml::submitButton('Siguiente',array('id'=>'siguiente-1','class'=>'btns-submit')); ?>
                     	<?php $this->endWidget(); ?>
                     </div>

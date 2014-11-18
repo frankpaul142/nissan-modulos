@@ -81,8 +81,9 @@ class DefaultController extends Controller
                     	$message->addTo($email->description);
                		}
                	}
-			    //$message->addTo("franklin.paula@share.com.ec");
-			    //$message->addTo("rodney.ledesma@share.com.ec");
+          //$message->addTo("rodney.ledesma@share.com.ec");
+			    //$message->addBcc("franklin.paula@share.com.ec");
+          //$message->addBcc("rodney.ledesma@share.com.ec");
                 $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
                 Yii::app()->mail->send($message);
                 echo json_encode(true);

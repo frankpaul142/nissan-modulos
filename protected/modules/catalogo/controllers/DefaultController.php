@@ -7,7 +7,7 @@ class DefaultController extends Controller
 	public function actionIndex()
 	{
         $client = new Client;
-        $catalogs= Catalog::model()->findAllByAttributes(array('status'=>'ACTIVE'));
+        $catalogs= Catalog::model()->findAll(array('condition'=>"status='ACTIVE'", 'order'=>'category'));
         $pictures=[];
         $files=[];
         foreach ($catalogs as $i => $catalog) {
@@ -20,6 +20,7 @@ class DefaultController extends Controller
 	public function actionvalidateRegisterUserDataAjax(){
         $model=new Client;
         $model->attributes=$_POST['Client'];
+        $model->preference_contact='';
         echo CActiveForm::validate($model);
     }
 
@@ -27,7 +28,7 @@ class DefaultController extends Controller
 		if(isset($_POST['selection']) && isset($_POST['Client'])){
 	        $client = New Client;
 	        $client->attributes=$_POST['Client'];
-	        
+	        $client->preference_contact='-';
 	        if($client->save()){
 	        	$error=false;
 	        	for ($i=0; $i<strlen($_POST['selection']); $i+=2) {//echo json_encode($i.'-');
