@@ -64,9 +64,9 @@ class Replacement extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'concessioner_id' => 'Concessioner',
-			'client_id' => 'Client',
-			'vehicle_id' => 'Vehicle',
+			'concessioner_id' => 'Concesionario',
+			'client_id' => 'Cliente',
+			'vehicle_id' => 'Vehiculo',
 			'part' => 'Parte',
 			'creation_date'=>'Fecha de creación'
 		);

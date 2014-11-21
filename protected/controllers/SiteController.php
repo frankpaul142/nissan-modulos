@@ -86,7 +86,7 @@ class SiteController extends Controller
 				$message->addTo($email->description);
 				} 
 			}
-				$message->addTo("supervisorcallcenter@ayasa.com.ec");
+				//$message->addTo("supervisorcallcenter@ayasa.com.ec");
 				Yii::app()->mail->send($message);
                 $this->render('result',array("client"=>$client,"vehicle"=>$vehicle,"technicaldate"=>$technicaldate));
                }else{
@@ -102,6 +102,72 @@ class SiteController extends Controller
 		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"technicaldate"=>$technicaldate,"versions"=>$versions));
                 }
 	}
+	public function actionDiagnostic() {
+        $client = new Client();
+        $vehicle = new VehicleClient();
+        $technicaldate = new TechnicalDate();
+        $criteria2= new CDbCriteria;
+          $criteria2->condition = 'id = 1 OR id = 3 OR id = 9 OR id = 13 OR id= 15 OR id = 16';
+        $concessioners = Concessioner::model()->findAllbyAttributes(array(),$criteria2);
+        $criteria = new CDbCriteria;
+      
+        //$criteria->order=name;
+        $criteria = new CDbCriteria;
+        //$criteria->condition = 'id != 36';
+        $criteria->order = "name";
+        $versions = VehicleVersion::model()->with('vehicle')->findAllbyAttributes(array(), $criteria);
+        //$versions= VehicleVersion::model()->findAllbyAttributes(array('status'=>'ACTIVE'),$criteria);
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'client-form') {
+            echo CActiveForm::validate($client);
+
+            Yii::app()->end();
+        }
+
+        if (isset($_POST['siguiente'])) {
+
+            // die("hola");
+
+
+            if (isset($_POST['Client']) && isset($_POST['TechnicalDate']) && isset($_POST['VehicleClient'])) {
+                //die("hola");
+                $client = new Client;
+                $client->attributes = $_POST['Client'];
+                $client->save();
+                $vehicle = new VehicleClient;
+                $vehicle->attributes = $_POST['VehicleClient'];
+                $vehicle->save();
+                $technicaldate = new TechnicalDate;
+                $technicaldate->attributes = $_POST['TechnicalDate'];
+                $technicaldate->client_id = $client->primaryKey;
+                ;
+                $technicaldate->vehicle_id = $vehicle->primaryKey;
+                ;
+                if ($technicaldate->save()) {
+                    $message = new YiiMailMessage;
+                    $message->view = 'agendamiento';
+                    $message->setSubject('Prospecto agendamiento de Cita');
+                    $message->setBody(array("client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate), 'text/html');
+                    $message->setFrom(array(Yii::app()->params['adminEmail'] => 'El Equipo Nissan Ecuador'));
+                    foreach ($technicaldate->concessioner->emails as $email) {
+                        if ($email->type == "TECHNICAL_DATE") {
+                            $message->addTo($email->description);
+                        }
+                    }
+                    //$message->addTo("supervisorcallcenter@ayasa.com.ec");
+                    Yii::app()->mail->send($message);
+                    $this->render('result', array("client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate));
+                } else {
+                    $this->render('error');
+                }
+            }
+
+            //$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"technicaldate"=>$technicaldate));
+        } else {
+
+
+            $this->render('index_d', array('concessioners' => $concessioners, "client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate, "versions" => $versions));
+        }
+    }
 	    public function actionTest() {
 		
         $message = new YiiMailMessage;
