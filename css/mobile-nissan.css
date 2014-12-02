@@ -215,7 +215,7 @@ footer{
 .modulos h1{
 	width:100%;
 	float:left;
-	font-size:1.5em;
+	font-size:16px;
 	color:#636466;
 	margin:0 0 15px 0;
 	}	
@@ -292,18 +292,19 @@ footer{
 	min-height:100px;
 	}	
 .cont-inputs label, .cont-inputs-lc label{
-	width:35%;
-	float:left;
-	text-align:right;
-	color:#666666;
-	font-size:1.1em;
+	width: 35%;
+	float: left;
+	text-align: right;
+	color: #666666;
+	font-size: 15px;
 	margin: 5px 0 0 0;
+	font-weight: 900;
 	}	
 .cont-inputs select, .cont-inputs-lc select{
 	width:59%;
 	margin:0 0 0 2%;
 	float:left;
-	font-size:1.1em;
+	font-size:14px;
 	border-radius:4px;
 	background-color:#EEEEEE;
 	padding:2px 2%;
@@ -313,7 +314,7 @@ footer{
 	width:55%;
 	margin:0 0 0 2%;
 	float:left;
-	font-size:1.1em;
+	font-size: 12px;
 	border-radius:4px;
 	background-color:#EEEEEE;
 	padding:2px 2%;
