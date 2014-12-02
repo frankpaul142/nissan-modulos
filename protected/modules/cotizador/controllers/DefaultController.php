@@ -9,7 +9,11 @@ class DefaultController extends Controller
               $client = new Client;
               $vehicles= Vehicle::model()->findAllByAttributes(array('status'=>'ACTIVE'));
               $cities=  City::model()->findAll();
-            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client));
+              $modelo='';
+              if(isset($_GET['utm_model'])){
+                $modelo=$_GET['utm_model'];
+              }
+            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'modelo'=>$modelo));
 	
                 
                 
