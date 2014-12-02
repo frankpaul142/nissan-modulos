@@ -56,7 +56,7 @@
                                 <option value="" selected="selected">selecciona un vehículo</option>
                      			<?php foreach($vehicles as $vehicle): ?>           
 					          		<?php if($vehicle->id!=6 && $vehicle->id!=9  && $vehicle->id!=13){ ?>
-                  						<option value="<?php echo $vehicle->id ?>" car_name="<?php echo $vehicle->name ?>"><?php echo $vehicle->name ?></option> 
+                  						<option value="<?php echo $vehicle->id ?>" car_name="<?php echo $vehicle->name ?>" <?php if($modelo==$vehicle->id) echo 'selected="selected"' ?>><?php echo $vehicle->name ?></option> 
                          		<?php } endforeach; ?>
                             </select>
                         </div>
@@ -221,6 +221,41 @@
         	location.reload();
         });
 
+        <?php if($modelo!=''){ ?>
+            $('#vehicle_1').val(<?php echo $modelo ?>);
+            $("#Drive_vehicle_version_id").html("");
+            $.ajax({
+                url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/manejo/Default/loadVersionVehicle",
+                cache: false,
+                type: "POST",
+                dataType: "json", 
+                async: false,
+                data:{
+                    vehicle_id:$('#vehicle_1').val()
+                },
+                success: function(data) {
+                    $.map( data, function( val, i ) {
+                        if(val.id){
+                            var z="";
+                            var y="";
+                            if(val.ac=='YES'){
+                                z="AC";
+                            }
+                            if(val.abs=='YES'){
+                                y="ABS";
+                            }
+                            var aux= $("<option></option>");              
+                            aux.attr("class","selectOption");
+                            aux.attr("value",val.id);
+                            aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
+                            $("#Drive_vehicle_version_id").append(aux);
+                        }
+                    });
+                    $("#car_name").html(data.name);
+                    $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
+                }                  
+            });
+        <?php } ?>
        	$('#vehicle_1').change(function(){
            	$("#Drive_vehicle_version_id").html("");
             $.ajax({
