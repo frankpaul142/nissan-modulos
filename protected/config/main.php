@@ -77,20 +77,20 @@ return array(
 	
 		// uncomment the following to use a MySQL database
 	
-		/*'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=nissanec_web2',
+		'db'=>array(
+			'connectionString' => 'mysql:host=166.63.0.204;dbname=nissanec_web2',
 			'emulatePrepare' => true,
 			'username' => 'nissanec_webcont',
 			'password' => '+E8yw6Lv)g.V',
 			'charset' => 'utf8',
-		),*/
-		'db'=>array(
+		),
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=nissanec_web2',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-		),
+		),*/
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

@@ -218,6 +218,7 @@ $cities= City::model()->findAll();
             <?php echo $form->textField($client,'cellphone',array("style"=>"width:150px;","class"=>"number")); ?> 
             </td>
           </tr>
+            <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
           <tr>
             <td>&nbsp;</td>
             <td colspan="2"><div class="eje-placa"><strong>Ej:</strong>0984250203</div></td>

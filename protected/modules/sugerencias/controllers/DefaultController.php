@@ -4,6 +4,12 @@ class DefaultController extends Controller
 {
 		public function actionIndex()
 	{   
+                $medio="default";
+                   if(isset($_GET["medio"])){
+          
+          $medio=$_GET["medio"];
+          
+      }
              $client= new Client();
                  $vehicle= new VehicleClient();
                  $suggestion= new Suggestion();
@@ -75,7 +81,7 @@ class DefaultController extends Controller
             }else{
                 
              
-		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"suggestion"=>$suggestion,"versions"=>$versions));
+		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"suggestion"=>$suggestion,"versions"=>$versions,"medio"=>$medio));
                 }
 	}
 	    public function actionSatisfaction($id) {

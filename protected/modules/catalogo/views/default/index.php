@@ -70,6 +70,7 @@
                             <?php echo $form->textField($client,'cellphone',array('class'=>'number', 'placeholder'=>'Ej: 0997854321')); ?>
                             <?php echo $form->error($client,'cellphone',array('class'=>'error-mg')); ?>
                         </div>
+                        <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
                         <?php echo CHtml::submitButton('Siguiente',array('id'=>'siguiente-1','class'=>'btns-submit')); ?>
                     	<?php $this->endWidget(); ?>
                     </div>

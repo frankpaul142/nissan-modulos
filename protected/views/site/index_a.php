@@ -1,15 +1,6 @@
 <?php /* @var $this Controller */ 
 $types=  Type::model()->findAll();
 $cities= City::model()->findAll();
-$list = array();
-$ci=array();
-foreach($concessioners as $z => $con){
-	$list[$con->id]=$con->name." ".$con->address."-".$con->city->name;
-	$ci[$con->id]=$con->city->id;   
-}
-
-				
-
 ?> 
 <div class="localizador">
       <?php $form=$this->beginWidget('CActiveForm', array(
@@ -31,38 +22,31 @@ foreach($concessioners as $z => $con){
     <div id="part_1">
    	  <h2>Solicite su cita</h2>
       	<table width="250px" border="0" cellspacing="3" cellpadding="3" align="center" >
-                <tr>
+          <tr>
             <td colspan="4">Ciudad:</td>
           </tr>
           <tr>
             <td colspan="4">
             	<select name="city" id="city" style="width:250px">
                     <option value="0">Selecciona una ciudad</option>
-					<?php $ciudades=[];
-					foreach ($concessioners as $concessioner):
-						$r=false;
-						foreach($ciudades as $ciudad_id){
-							if($concessioner->city->id==$ciudad_id){
-								$r=true;
-								break;
-							}
-						}
-						if(!$r){
-							array_push($ciudades, $concessioner->city->id);?>
-							<option value="<?php echo $concessioner->city->id ?>"><?php echo $concessioner->city->name ?></option>
-						<?php }
-					endforeach; ?>
+									<?php foreach ($cities as $city): ?>
+                                                                        <?php if($city->id != 21){ ?>
+                                                                        <?php if(isset($city_id)&&$city_id==$city->id){ ?>
+                                                                          <option selected="true" value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
+                                                                        <?php }else{ ?>
+                                                                                   <option value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
+                                                                        <?php  }?>
+                                                                        <?php } endforeach; ?>
                 </select>
             </td>
           </tr>
-
           <tr>
             <td colspan="4">Centro de Servicio:</td>
           </tr>
           <tr>
             <td colspan="4">
            			
-                <?php echo $form->dropDownList($technicaldate,'concessioner_id',[], array('prompt'=>'Selecciona un concesionario','style'=>'width:250px')); ?>
+                <?php echo $form->dropDownList($technicaldate,'concessioner_id',array(), array('prompt'=>'Selecciona un concesionario','style'=>'width:250px')); ?>
                 <?php echo $form->error($technicaldate,'concessioner_id'); ?>
             </td>
           </tr>
@@ -113,8 +97,7 @@ foreach($concessioners as $z => $con){
                 </select>
             </td>
           </tr>
-		  <input type="hidden" name="TechnicalDate[taxi]" value="NO" />
-          <!--<tr>
+          <tr>
           	<td colspan="3">Requiere servicio de taxi:</td>
             <td>
             	<select name="TechnicalDate[taxi]" id="taxi" style="width:100px;">
@@ -122,7 +105,7 @@ foreach($concessioners as $z => $con){
                             <option value="NO">No</option>
 				</select>
             </td>
-          </tr>-->
+          </tr>
         </table>
     </div>
     <div id="part_2">
@@ -204,13 +187,13 @@ foreach($concessioners as $z => $con){
           </tr>
           <tr>
                <td colspan="5">
-					<input type="hidden" name="TechnicalDate[work]" value="Diagnóstico Técnico" />
-					Diagnóstico Técnico
-					<!--<select id="work"  name="TechnicalDate[work]"  style="width:300px;" >
-                        
+                   <select id="work"  name="TechnicalDate[work]"  style="width:300px;" >
+                            <option id="mant" value="Mantenimiento Preventivo" >Mantenimiento Preventivo</option>
+                            <option id="manta" value="Mantenimiento Preventivo con Trabajos Adicionales" >Mantenimiento Preventivo con Trabajos Adicionales</option>
+                            <option id="mec"  value="Mecánica o mantenimiento con trabajos adicionales">Mecánica</option>
 							<option id="Dt"  value="Diagnóstico Técnico">Diagnóstico Técnico</option>
 							
-                    </select>-->
+                    </select>
                </td>
           </tr>
           <tr id="aw_cont" style="display: none;">
@@ -219,7 +202,7 @@ foreach($concessioners as $z => $con){
           <tr>
             <td id="km_work" style="display: block;width: 74px" colspan="5">
                    
-                <select name="km_work"  style="width:92px;display:none;" >
+                <select name="km_work"  style="width:92px;" >
                            <?php for($i=5000; $i<=100000; $i+=5000){ ?> 
                     <option value="<?php echo $i ?>km"><?php echo $i ?>km</option>
                            <?php } ?>   
@@ -354,7 +337,7 @@ foreach($concessioners as $z => $con){
       
       
       $(document).ready(function() {
-           /* $("#city").click(function(event){
+            $("#city").click(function(event){
                    $("#TechnicalDate_concessioner_id").html("");
 				   var z =$("<option>Seleccione un concesionario</option>");
 				    $("#TechnicalDate_concessioner_id").append(z);
@@ -383,21 +366,7 @@ foreach($concessioners as $z => $con){
                      
               
            });    
-            });*/
-			
-			var concessioners=<?php echo json_encode($list) ?>;
-			var cities=<?php echo json_encode($ci) ?>;
-			$("#city").change(function(){
-				html='';
-				for(k in cities){
-					if(cities[k]==$(this).val()){
-						html+='<option value="'+k+'">'+concessioners[k]+'</option>';
-					}
-				}
-				$("#TechnicalDate_concessioner_id").html('');
-				$("#TechnicalDate_concessioner_id").append(html);
-			});
-			
+            });
             $("#work").change(function(){
               if( $(this).val() === "Mantenimiento Preventivo"){
        

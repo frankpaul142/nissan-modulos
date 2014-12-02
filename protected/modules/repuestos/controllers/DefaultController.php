@@ -4,6 +4,12 @@ class DefaultController extends Controller
 {
 	public function actionIndex()
 	{   
+              $medio="default";
+                   if(isset($_GET["medio"])){
+          
+          $medio=$_GET["medio"];
+          
+      }
              $client= new Client();
                  $vehicle= new VehicleClient();
                  $replacement= new Replacement();
@@ -71,7 +77,7 @@ class DefaultController extends Controller
             }else{
                 
              
-		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement,"versions"=>$versions));
+		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement,"versions"=>$versions,"medio"=>$medio));
                 }
 	}
 	    public function actionSatisfaction($id) {
@@ -120,7 +126,7 @@ class DefaultController extends Controller
 		$vehicle= new VehicleClient();
 		$replacement= new Replacement();
 		$criteria2= new CDbCriteria;
-        $criteria2->condition = 'id = 1 OR id = 3 OR id = 9 OR id = 13 OR id= 15 OR id = 16';
+        $criteria2->condition = 'id = 1 OR id = 2 OR id = 9 OR id = 10 OR id = 11  OR id = 13 OR id = 14 OR id= 15 OR id = 16';
         $concessioners = Concessioner::model()->findAllbyAttributes(array(),$criteria2);
 		$criteria = new CDbCriteria;
 		//$criteria->condition = 'id != 36';

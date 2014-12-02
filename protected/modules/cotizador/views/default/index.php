@@ -236,6 +236,7 @@
                       	 		echo $form->dropDownList($client,'localize', $localize, array('prompt'=>'Opcional','class'=>'select-n')); 
                      		 ?> 
                                </div>
+                               <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
                         <span class="tit-formulario2">Hora de Contacto</span>
                         <select name="Client[preference_contact2]" class="select-n">
                             <option value="8:00 am - 10:00 am"> 8:00 am - 10:00 am </option>  

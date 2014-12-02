@@ -10,10 +10,14 @@ class DefaultController extends Controller
               $vehicles= Vehicle::model()->findAllByAttributes(array('status'=>'ACTIVE'));
               $cities=  City::model()->findAll();
               $modelo='';
+              $medio='default';
               if(isset($_GET['utm_model'])){
                 $modelo=$_GET['utm_model'];
               }
-            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'modelo'=>$modelo));
+                if(isset($_GET["medio"])){
+                 $medio=$_GET["medio"];
+                }
+            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'modelo'=>$modelo,'medio'=>$medio));
 	
                 
                 

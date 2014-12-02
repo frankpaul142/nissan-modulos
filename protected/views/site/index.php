@@ -188,12 +188,14 @@ $cities= City::model()->findAll();
           <tr>
                <td colspan="5">
                    <select id="work"  name="TechnicalDate[work]"  style="width:300px;" >
-                            <option id="mant" value="Mantenimiento Preventivo" >Mantenimiento Preventivo</option>
-                            <option id="manta" value="Mantenimiento Preventivo con Trabajos Adicionales" >Mantenimiento Preventivo con Trabajos Adicionales</option>
+                            <option value="default" disabled="disabled">Selecciona una opción</option>
+							<option id="mant" value="Mantenimiento Periódico" >Mantenimiento Periódico</option>
+                          
                             <option id="mec"  value="Mecánica o mantenimiento con trabajos adicionales">Mecánica</option>
-							<option id="Dt"  value="Diagnóstico Técnico">Diagnóstico Técnico</option>
+						
 							
                     </select>
+					
                </td>
           </tr>
           <tr id="aw_cont" style="display: none;">
@@ -292,6 +294,7 @@ $cities= City::model()->findAll();
             <td colspan="2">
             <?php echo $form->error($client,'cellphone'); ?>
             <?php echo $form->textField($client,'cellphone',array("style"=>"with:150px;","class"=>"number")); ?> 
+			  <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
             </td>
           </tr>
 		  <tr style="height:20px">
@@ -321,7 +324,11 @@ $cities= City::model()->findAll();
     	
     	
     </div>
-  </div>  <div id="barra_localizador">Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su cita dependerá de la <br/>disponibilidad de nuestros Centros de Servicio.</br>Tenemos m&aacute;s de 20 concesionarios a nivel nacional, y estaremos gustosos en atenderle.</div>
+  </div>  <div id="barra_localizador">
+ <strong>*Mantenimiento periódico:</strong> Trabajos de acuerdo al kilometraje de su vehículo que buscan cuidar la vida útil de su vehículo y brindarle el mejor servicio. 
+ <br/><strong>*Mecánica:</strong> Trabajo que se realiza a los vehículos cuando algún elemento ha sufrido algún daño, desperfecto o requiere diagnóstico mecánico para la corrección inmediata. <br/>
+Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su cita dependerá de la <br/>disponibilidad de nuestros Centros de Servicio.</br>Tenemos m&aacute;s de 20 concesionarios a nivel nacional, y estaremos gustosos en atenderle.
+  </div>
 
 
     <?php $this->endWidget(); ?>
@@ -337,7 +344,7 @@ $cities= City::model()->findAll();
       
       
       $(document).ready(function() {
-            $("#city").click(function(event){
+            $("#city").change(function(event){
                    $("#TechnicalDate_concessioner_id").html("");
 				   var z =$("<option>Seleccione un concesionario</option>");
 				    $("#TechnicalDate_concessioner_id").append(z);
@@ -353,7 +360,7 @@ $cities= City::model()->findAll();
                     },
                      success: function(data) {
                     $.map( data, function( val, i ) {
-                        if(val.id!=='2'&& val.id!=='4'){
+                        if(val.id!=='2'&& val.id!=='4'&& val.id!=='10'&& val.id!=='11'&& val.id!=='14'&& val.id!=='20'){
                         var aux= $("<option></option>");
                         aux.attr("value",val.id);
                         aux.html(val.name+" "+val.address);
@@ -375,7 +382,7 @@ $cities= City::model()->findAll();
                        $("#aw_cont").hide();
 
     }else {
-        if($(this).val() === "Mantenimiento Preventivo con Trabajos Adicionales"){
+        if($(this).val() === "Mantenimiento Periódico"){
              $("#additional_work").show();  		$("#title_additional_work").html("Trabajo adicional:");
                        $("#km_work").show();  
                        $("#aw_cont").hide();  

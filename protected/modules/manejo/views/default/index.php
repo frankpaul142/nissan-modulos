@@ -182,6 +182,7 @@
                   	 		echo $form->dropDownList($client,'preference_contact', $condition, array('prompt'=>'Selecciona una opción')); 
                  			echo $form->error($client,'preference_contact',array('class'=>'error-mg')); ?>
                         </div>
+                         <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
                         <?php echo CHtml::submitButton('Finalizar',array('id'=>'siguiente-3','class'=>'btns-submit')); ?>
                     	<?php $this->endWidget(); ?>
                     </div>

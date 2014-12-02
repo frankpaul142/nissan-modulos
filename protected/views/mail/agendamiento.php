@@ -49,6 +49,10 @@ Cliente.<br/><br/>
                         ?>
             </td>
         </tr>
+		 <tr>
+        	<td><strong>Medio:</strong></td>
+            <td colspan="3" id="concessioner_result"><?php echo $client->medio; ?></td>
+        </tr>
         <tr>
         	<td><strong>Centro de servicio:</strong></td>
             <td colspan="3" id="concessioner_result"><?php echo $technicaldate->concessioner->name ?></td>

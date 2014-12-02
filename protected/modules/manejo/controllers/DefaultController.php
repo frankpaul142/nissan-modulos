@@ -6,11 +6,15 @@ class DefaultController extends Controller
 	
 	public function actionIndex()
 	{
-		$model=new Drive;  
+		    $model=new Drive;  
       	$client = new Client;
       	$vehicles= Vehicle::model()->findAllByAttributes(array('status'=>'ACTIVE'));
       	$cities=  City::model()->findAll();
-        $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client));      
+        $medio='default';
+         if(isset($_GET["medio"])){
+                 $medio=$_GET["medio"];
+                }
+        $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'medio'=>$medio));      
     }
 
     public function actionvalidateRegisterVehicleDataAjax(){

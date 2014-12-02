@@ -39,6 +39,7 @@ class Client extends CActiveRecord
 			array('identity','identityEcuador'),
 			array('name, lastname, preference_contact2', 'length', 'max'=>100),
 			array('email', 'email'),
+			array('medio', 'length', 'max'=>20),
 			array('localize', 'length', 'max'=>50),
 			array('phone', 'length', 'max'=>9,'min'=>9),
 			// The following rule is used by search().

@@ -110,6 +110,7 @@ $cities= City::model()->findAll();
             <?php echo $form->textField($client,'cellphone',array("style"=>"width:150px;","class"=>"number")); ?>
                   <?php echo $form->error($client,'cellphone'); ?>
             </td>
+                <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
           </tr>
           <tr>
             <td>&nbsp;</td>
