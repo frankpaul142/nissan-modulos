@@ -8,7 +8,7 @@
     <iframe id="ifr" src="http://localhost/nissan-modules/cotizador" width="960px" height="700px"></iframe>
 </body>
 <script type="text/javascript">
-function get(name) {
+/*function get(name) {
     if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
         return decodeURIComponent(name[1]);
 }
@@ -20,6 +20,22 @@ if (typeof get('utm_model') !== 'undefined') {
     }
 } else if (typeof get('medio') !== 'undefined') {
     variables += '?medio=' + get('medio');
+}
+document.getElementById('ifr').src = document.getElementById('ifr').src + variables;*/
+</script>
+<script type="text/javascript">
+function get(name) {
+    if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
+}
+var variables = '';
+if (typeof get('utm_model') !== 'undefined') {
+    variables += '?utm_model=' + get('utm_model');
+    if (typeof get('utm_source') !== 'undefined') {
+        variables += '&medio=' + get('utm_source');
+    }
+} else if (typeof get('utm_source') !== 'undefined') {
+    variables += '?medio=' + get('utm_source');
 }
 document.getElementById('ifr').src = document.getElementById('ifr').src + variables;
 </script>

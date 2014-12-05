@@ -85,7 +85,7 @@ class DefaultController extends Controller
                 $message->setBody(array("client"=>$client,"drive"=>$driv),'text/html');
 				$message->setSubject('Solicitud Prueba de Manejo');
               	foreach($driv->concessioner->emails as $email){
-                 	if($email->type=="DRIVE"){
+                 	if($email->type=="QUOTATION"){
                     	$message->addTo($email->description);
                		}
                	}
