@@ -111,6 +111,12 @@ class SiteController extends Controller
                 }
 	}
 	public function actionDiagnostic() {
+		 $medio="default";
+				   if(isset($_GET["medio"])){
+          
+          $medio=$_GET["medio"];
+          
+      }
         $client = new Client();
         $vehicle = new VehicleClient();
         $technicaldate = new TechnicalDate();
@@ -173,7 +179,7 @@ class SiteController extends Controller
         } else {
 
 
-            $this->render('index_d', array('concessioners' => $concessioners, "client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate, "versions" => $versions));
+            $this->render('index_d', array('concessioners' => $concessioners, "client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate, "versions" => $versions,"medio"=>$medio));
         }
     }
 	    public function actionTest() {

@@ -122,6 +122,12 @@ class DefaultController extends Controller
     }
 	
 	public function actionDiagnostic() {
+         $medio="default";
+                   if(isset($_GET["medio"])){
+          
+          $medio=$_GET["medio"];
+          
+      }
 		$client= new Client();
 		$vehicle= new VehicleClient();
 		$replacement= new Replacement();
@@ -189,7 +195,7 @@ class DefaultController extends Controller
                 
               //$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement));
 		}else{
-            $this->render('index_d',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement,"versions"=>$versions));
+            $this->render('index_d',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement,"versions"=>$versions,"medio"=>$medio));
 		}	
     }
 }

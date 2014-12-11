@@ -49,6 +49,10 @@
 				<tr>
 					<td align="right" style="width:30%"><b>E-mail: </b></td><td style="width:30%"><?php echo $client->email; ?></td>
 				</tr>
+					 <tr>
+        	<td><strong>Medio:</strong></td>
+            <td colspan="3" id="concessioner_result"><?php echo $client->medio; ?></td>
+        </tr>
 				<tr>
 					<td align="right" style="width:30%"><b>Medio de contacto: </b></td><td style="width:30%"><?php echo $client->preference_contact; ?></td>
 				</tr>

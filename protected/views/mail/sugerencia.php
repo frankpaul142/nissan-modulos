@@ -187,6 +187,10 @@
     <br/>  <label><?php echo $suggestion->client->preference_contact?></label></a>
     </td>
   </tr>
+  	 <tr>
+        	<td><strong>Medio:</strong></td>
+            <td colspan="3" id="concessioner_result"><?php echo $client->medio; ?></td>
+        </tr>
                     </tbody>
                   </table></td>
               </tr>

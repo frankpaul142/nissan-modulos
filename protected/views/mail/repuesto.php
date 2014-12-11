@@ -64,6 +64,7 @@
  </select></a>
     </td>
   </tr>
+  
   <tr>
     <td><a>A&ntilde;o:
     <label ><?php echo $replacement->vehicle->year ?></label></a></td>
@@ -122,7 +123,10 @@
     <br/>  <label><?php echo $replacement->client->preference_contact?></label></a>
     </td>
   </tr>
- 
+ 	 <tr>
+        	<td><strong>Medio:</strong></td>
+            <td colspan="3" id="concessioner_result"><?php echo $client->medio; ?></td>
+        </tr>
 </table>
 </td>
   </tr>

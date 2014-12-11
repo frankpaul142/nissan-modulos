@@ -208,6 +208,7 @@ foreach($concessioners as $z => $con){
             <td colspan="2">
              <?php echo $form->error($client,'cellphone'); ?>
             <?php echo $form->textField($client,'cellphone',array("style"=>"width:150px;","class"=>"number")); ?> 
+                     <?php echo $form->hiddenField($client,'medio',array("value"=>$medio)); ?>
             </td>
           </tr>
           <tr>
