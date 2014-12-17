@@ -121,7 +121,7 @@ class SiteController extends Controller
         $vehicle = new VehicleClient();
         $technicaldate = new TechnicalDate();
         $criteria2= new CDbCriteria;
-          $criteria2->condition = 'id = 1 OR id = 3 OR id = 9 OR id = 13 OR id= 15 OR id = 16';
+        //$criteria2->condition = 'id = 1 OR id = 3 OR id = 9 OR id = 13 OR id= 15 OR id = 16';
         $concessioners = Concessioner::model()->findAllbyAttributes(array(),$criteria2);
         $criteria = new CDbCriteria;
       
