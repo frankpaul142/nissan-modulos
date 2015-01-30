@@ -35,10 +35,11 @@ class DefaultController extends Controller
 	        $client->preference_contact='-';
 	        if($client->save()){
 	        	$error=false;
-	        	for ($i=0; $i<strlen($_POST['selection']); $i+=2) {//echo json_encode($i.'-');
+	        	$selection=preg_split('/,/', $_POST['selection']);
+	        	foreach ($selection as $i => $s) {
 	        		$cc=new ClientCatalog();
 	        		$cc->client_id=$client->id;
-	        		$cc->catalog_id=$_POST['selection'][$i];
+	        		$cc->catalog_id=$s;
 	        		$cc->creation_date=date("Y-m-d H:i:s");
 	        		$cc->isNewRecord=true;
 	        		if(!$cc->save()){

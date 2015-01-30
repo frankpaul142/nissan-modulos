@@ -7,6 +7,7 @@
 <link href="<?php echo Yii::app()->request->getBaseUrl(true); ?>/css/queries-nissan.css" type="text/css" rel="stylesheet"/>
 <link rel="shortcut icon" href="images/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
