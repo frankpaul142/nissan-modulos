@@ -10,13 +10,13 @@ class DefaultController extends Controller
         $catalogs= Catalog::model()->findAll(array('condition'=>"status='ACTIVE'", 'order'=>'category'));
         $pictures=[];
         $files=[];
-         $medio='default';
-          if(isset($_GET["medio"])){
-                 $medio=$_GET["medio"];
-                }
+        $medio='default';
+        if(isset($_GET["medio"])){
+     		$medio=$_GET["medio"];
+    	}
         foreach ($catalogs as $i => $catalog) {
-        	array_push($pictures, $catalog->vehicle->pictures[0]->description);
-        	array_push($files, $catalog->file);
+        	$pictures[$catalog->id]= $catalog->vehicle->pictures[0]->description;
+        	$files[$catalog->id]= $catalog->file;
         }
         $this->render('index',array("catalogs"=>$catalogs,'client'=>$client, 'pictures'=>$pictures, 'files'=>$files,'medio'=>$medio));
 	}

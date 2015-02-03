@@ -137,8 +137,8 @@
 					var html='';
 					for(i in cb){
 						html+='<div class="carros-check">'+
-                    		'<img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/'+pictures[cb[i]-1]+'" alt="auto nissan"/>'+
-                        	'<a href="http://nissan.com.ec/sp/web/nscuploader/pdf/'+files[cb[i]-1]+'" download>'+
+                    		'<img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/'+pictures[cb[i]]+'" alt="auto nissan"/>'+
+                        	'<a href="http://nissan.com.ec/sp/web/nscuploader/pdf/'+files[cb[i]]+'" download>'+
                         		'<img src="images/btn-descargarpdf.png" alt="btn descargar"/>'+
                     		'</a>'+
                        	'</div>';
