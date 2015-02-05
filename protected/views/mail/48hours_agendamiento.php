@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+  <title></title>
+
+</head>
+
+
+
+<body style="padding: 0px; margin: 0px;">
+
+
+
+  <table bgcolor="#EBEBEB" width="100%" cellspacing="0" cellpadding="0" style="vertical-align:top">
+
+    <tr>
+
+      <td>
+
+        <table width="700px" cellspacing="0" cellpadding="0" style="vertical-align:top" align="center">
+
+          <tr>
+
+            <td>
+
+              <table width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+
+                <tr>
+
+                  <td width="700px" height="435px" align="left" style="outline:none; border:none" colspan="2">
+
+                    <img src="https://shareecuador.com/nissan-mailing/end-pint48_01.jpg" width="700" height="435" border="0" alt="Nissan" style="margin:0; padding:0; float:left; display:block;" align="middle">
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="700px" height="60px" align="left" style="outline:none; border:none" colspan="2">
+
+                    <div style="width:70%; padding:0 15%; font-size:42px; font-family:Verdana, Geneva, sans-serif; color:#c41733;"><?php echo $technical->client->name ?></div>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="700px" height="89px" align="left" style="outline:none; border:none" colspan="2">
+
+                    <img src="https://shareecuador.com/nissan-mailing/end-pint48_03.jpg" width="700" height="89" border="0" alt="Nissan" style="margin:0; padding:0; float:left; display:block;" align="middle">
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="700px" height="60px" align="left" style="outline:none; border:none; font-size:22px; font-family:Verdana, Geneva, sans-serif; color:#3c3c3b; text-align:center; font-style:italic;" colspan="2">
+
+                    &iquest;Nuestro asistente de servicio al cliente
+                    <br/>agend&oacute; su cita?
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="700px" height="60px" align="left" style="outline:none; border:none; font-size:22px; font-family:Verdana, Geneva, sans-serif; color:#3c3c3b; text-align:center; padding:55px 0 35px 0;" colspan="2">
+
+                    <a href="http://nissanecuador.webcontent.ec/agendamientocita/site/satisfaction/id/<?php echo $technical->id ?>" style="padding:5px 25px; background-color:#900; color:#FFF; text-decoration:none; font-size:18px;">CLICK AQU&Iacute;</a>
+
+                  </td>
+
+                </tr>
+
+              </table>
+
+            </td>
+
+          </tr>
+
+        </table>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+
+
+</body>
+
+</html>

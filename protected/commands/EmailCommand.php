@@ -79,6 +79,28 @@ class EmailCommand extends CConsoleCommand {
            
             
         }
+
+        $technicals= TechnicalDate::model()->findAllByAttributes(array('review'=>'NO'));
+		foreach($technicals as $technical){
+	       	// $datequotation=date("Y-m-d",$quotation->registration_date);
+			$datequotation1=new DateTime($technical->creation_date);
+			$aux=date_diff($datenow1, $datequotation1);
+			//die(print_r($datequotation1));
+			//die(print_r($aux->days));
+            if($aux->days==2){
+                $message = new YiiMailMessage;
+                $message->view = '48hours_agendamiento';
+                $message->setBody(array("technical"=>$technical),'text/html');
+                $message->setSubject('Nos interesa servirle mejor.');
+                $message->addTo($technical->client->email);
+                $message->from = Yii::app()->params['adminEmail'];
+                if(Yii::app()->mail->send($message)){ 
+                   $technical->review="YES";
+                   $technical->save();
+                   
+                }
+            }
+        }
         
     }
 }

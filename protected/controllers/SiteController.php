@@ -110,6 +110,48 @@ class SiteController extends Controller
 		$this->render('index',array('concessioners'=>$concessioners,"client"=>$client,"vehicle"=>$vehicle,"technicaldate"=>$technicaldate,"versions"=>$versions,"medio"=>$medio));
                 }
 	}
+
+	public function actionSatisfaction($id) {
+        $technical = TechnicalDate::model()->findByPk($id);
+        $model = new SatisfactionT;
+        if (isset($_POST['SatisfactionT'])) {
+              
+            $model->attributes = $_POST['SatisfactionT'];
+            $model->technical_id = $technical->id;
+            if ($model->save()) {
+
+                $sat = SatisfactionT::model()->findByPk($model->primaryKey);
+                $message = new YiiMailMessage;
+                $message->view = 'encuesta_t';
+                $message->setBody(array("satisfaction" => $sat), 'text/html');
+                $message->setSubject('Satisfacción del Prospecto Web.');
+                if ($sat->score < 10) {
+                    $message->setSubject('Satisfacción del Prospecto Web.');
+                }
+                if ($sat->contact == "NO") {
+                    $message->setSubject('Prospecto No Contactado');
+                }
+
+
+                foreach ($technical->concessioner->emails as $email) {
+
+                    if ($email->type == "TECHNICAL_DATE") {
+                        $message->addTo($email->description);
+                    }
+                }
+                //$message->addTo("franklin.paula@share.com.ec");
+                $message->setFrom(array(Yii::app()->params['adminEmail'] => 'El Equipo Nissan Ecuador'));
+                Yii::app()->mail->send($message);
+                $this->render('satisfaction_finished', array('technical' => $technical));
+            }
+        } else {
+
+            if ($technical) {
+                $this->render('satisfaction', array('model' => $model, 'technical' => $technical));
+            }
+        }
+    }
+
 	public function actionDiagnostic() {
 		 $medio="default";
 				   if(isset($_GET["medio"])){
