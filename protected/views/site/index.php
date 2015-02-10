@@ -198,6 +198,29 @@ $cities= City::model()->findAll();
 					
                </td>
           </tr>
+          <tr>
+            <td colspan="5">
+              Normal
+              <?php 
+              echo CHtml::radioButton('btn', false, array(
+            
+              'value'=>'1',
+              'name'=>'btnname',
+              'uncheckValue'=>null
+          )); ?>
+          Express
+              <?php
+           
+          echo CHtml::radioButton('btn', false, array(
+
+              'value'=>'2',
+              'name'=>'btnname',
+              'uncheckValue'=>null
+));
+    ?>
+            </td>
+
+          </tr>
           <tr id="aw_cont" style="display: none;">
               <td colspan="3"><input id="aw" type="checkbox"/>Con trabajos adicionales.</td> 
           </tr>  
