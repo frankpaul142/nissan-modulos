@@ -68,8 +68,8 @@ $cities= City::model()->findAll();
         'changeYear' => true,           // can change year
         'changeMonth' => true,          // can change month
         'yearRange' => '1900:2018',     // range of year
-        'minDate' => '2014-01-01',      // minimum date
-        'maxDate' => '2014-12-31',      // maximum date
+        'minDate' => date('Y-m-d'),      // minimum date
+        'maxDate' => date('Y').'-12-31',      // maximum date
         'showButtonPanel' => false,      // show button panel
     ),
    
@@ -200,24 +200,23 @@ $cities= City::model()->findAll();
           </tr>
           <tr>
             <td colspan="5">
-              Normal
-              <?php 
-              echo CHtml::radioButton('btn', false, array(
-            
-              'value'=>'1',
-              'name'=>'btnname',
-              'uncheckValue'=>null
-          )); ?>
-          Express
-              <?php
-           
-          echo CHtml::radioButton('btn', false, array(
-
-              'value'=>'2',
-              'name'=>'btnname',
-              'uncheckValue'=>null
-));
-    ?>
+              	Normal
+              	<?php 
+	            echo CHtml::radioButton('btn', false, array(
+	            'id'=>'btn-1',
+	            'value'=>'Normal',
+	            'name'=>'btnname',
+	            'uncheckValue'=>null
+		        )); ?>
+		        Express
+		        <?php
+		          	echo CHtml::radioButton('btn', false, array(
+		          		'id'=>'btn-2',
+						'value'=>'Express',
+		              	'name'=>'btnname',
+		              	'uncheckValue'=>null
+					));
+			    ?>
             </td>
 
           </tr>
@@ -227,7 +226,7 @@ $cities= City::model()->findAll();
           <tr>
             <td id="km_work" style="display: block;width: 74px" colspan="5">
                    
-                <select name="km_work"  style="width:92px;" >
+                <select name="km_work" style="width:92px;" id="km_work_select">
                            <?php for($i=5000; $i<=100000; $i+=5000){ ?> 
                     <option value="<?php echo $i ?>km"><?php echo $i ?>km</option>
                            <?php } ?>   
@@ -238,8 +237,11 @@ $cities= City::model()->findAll();
           </tr>
           <tr>
               <td id="additional_work" style="display: none;" colspan="5">
-              <h4 id="title_additional_work">Trabajo adicional:</h4>
-              <textarea name="TechnicalDate[detail_work]"  style="width:300px"></textarea>
+	              <h4 id="title_additional_work">Trabajo adicional:</h4>
+	              <textarea name="TechnicalDate[detail_work]"  style="width:300px"></textarea>
+              </td>
+              <td id="additional_work2" style="display: none;" colspan="5">
+              	Si su mantenimiento requiere trabajos adicionales, se debe agendar como Cita Normal
               </td>
           </tr>
         </table>
@@ -397,6 +399,28 @@ Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su c
               
            });    
             });
+			$('[id^="btn-"]').change(function () {
+				var html='';
+				$('#km_work_select').html('');
+				if($(this).val()=='Normal'){
+					$("#additional_work").show();
+					$("#additional_work2").hide();
+					for(i=5000; i<=100000; i+=5000){
+						html+='<option value="'+i+'km">'+i+'km</option>';
+					}
+				}
+				else{
+					$("#additional_work").hide();
+					$("#additional_work2").show();
+					for(i=5000; i<=100000; i+=5000){
+						if(i!=40000 && i!=80000){
+							html+='<option value="'+i+'km">'+i+'km</option>';
+						}
+					}
+				}
+				html+='<option value="+100000km">+100000km</option>';
+				$('#km_work_select').html(html);
+			})
             $("#work").change(function(){
               if( $(this).val() === "Mantenimiento Preventivo"){
        
