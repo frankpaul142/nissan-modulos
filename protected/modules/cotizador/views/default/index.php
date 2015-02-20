@@ -50,7 +50,21 @@
                         <a href="javascript:void(0)" id="btn-c2">Modelo Alternativo</a>
 						</div>
 						<!-- -->
-                         <div id="info_concessioner" class="info-concesionario" style="display:none;">
+						<div id="precio1" style="display:none">
+                        	<label class="title_co">Precio Contado</label> 
+						   	<label id="precio_contado1"></label><br/>
+                        	<label class="title_co">Cuotas</label> 
+						   	<select>
+						   		<?php for($i=1;$i<=48;$i++){ ?>
+						   		<option value="<?php echo $i ?>"><?php echo $i ?></option>
+						   		<?php } ?>
+						   	</select><br/>
+                        	<label class="title_co">Cuota estimada</label> 
+						   	<label id="cuota_estimada1"></label><br/>
+                        	<label class="title_co">Precio Final</label> 
+						   	<label id="precio_final1"></label><br/>
+                        </div>
+                        <div id="info_concessioner" class="info-concesionario" style="display:none;">
                             <div class="tit-concesionario">Concesionario</div>
                             <div class="txt-concesionario">
                                <label class="title_co">Nombre</label> 
@@ -260,6 +274,20 @@
                     <div id="car_name2"class="titulo-auto2">XTRAIL 2.5</div>
                     <div class="img-auto">
                         <img id="car_second_final" src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/auto-cotizador.jpg" width="438" height="295" alt="auto nissan"/>
+                        <div>
+                        	<label class="title_co">Precio Contado</label> 
+						   	<label id="precio_contado2"></label><br/>
+                        	<label class="title_co">Cuotas</label> 
+						   	<select>
+						   		<?php for($i=1;$i<=48;$i++){ ?>
+						   		<option value="<?php echo $i ?>"><?php echo $i ?></option>
+						   		<?php } ?>
+						   	</select><br/>
+                        	<label class="title_co">Cuota estimada</label> 
+						   	<label id="cuota_estimada2"></label><br/>
+                        	<label class="title_co">Precio Final</label> 
+						   	<label id="precio_final2"></label><br/>
+                        </div>
                         <a href="#" class="btn-cotizadador" id="solicitar-nueva"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-cotizador.png"/></a>
                         <a href="http://nissan.com.ec/sp/web/nscuploader/gama-nissan.html" target="_blank" class="btn-cotizadador"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-gamaautos.png" style="margin-left: 25px;"/></a>
                     </div>
@@ -307,6 +335,7 @@
                          aux.attr("value",val.id);
                         aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         $("#Quotation_vehicle_version_id").append(aux);
+                        $('#precio_contado1').text('$'+val.price);
                         }
                     });
                           $("#car_name").html(data.name);
@@ -344,6 +373,7 @@
                          aux.attr("value",val.id);
                         aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         $("#Quotation_vehicle_version_id").append(aux);
+                        $('#precio_contado1').text('$'+val.price);
                         }
                     });
                           $("#car_name").html(data.name);
@@ -377,7 +407,7 @@
                         aux.attr("name_c",val.name);
                         aux.attr("phone",val.phone);
                         aux.attr("address",val.address);
-                        aux.html(val.name+" "+val.address);
+                        aux.html(val.name+" ("+val.address+")");
                         $("#Quotation_concessioner_id").append(aux);
                     });
                      }                       
@@ -415,7 +445,7 @@
                          aux.attr("value",val.id);
                         aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         $("#Quotation_vehicle_version_id2").append(aux);
-
+                        $('#precio_contado2').text('$'+val.price);
                        }
                     });
             $("#car_name2").html(data.name);
@@ -491,8 +521,8 @@ function validarPasos(){
                 $("#paso_2").hide();
                 $("#btn-c").hide();
                 $("#btn-c2").hide();
-
-				 $("#text_end").show();
+				$("#text_end").show();
+				$("#precio1").show();
                 break;
         default: $("#cotizacion").show("drop");
                 break; 

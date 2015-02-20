@@ -388,7 +388,7 @@ Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su c
                         if(val.id!=='2'&& val.id!=='4'&& val.id!=='10'&& val.id!=='11'&& val.id!=='14'&& val.id!=='20'){
                         var aux= $("<option></option>");
                         aux.attr("value",val.id);
-                        aux.html(val.name+" "+val.address);
+                        aux.html(val.name+" ("+val.address+")");
                         $("#TechnicalDate_concessioner_id").append(aux);
                         }
                     });

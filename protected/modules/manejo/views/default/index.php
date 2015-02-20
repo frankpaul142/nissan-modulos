@@ -314,7 +314,7 @@
                         aux.attr("name_c",val.name);
                         aux.attr("phone",val.phone);
                         aux.attr("address",val.address);
-                        aux.html(val.name+" "+val.address);
+                        aux.html(val.name+" ("+val.address+")");
                         $("#Drive_concessioner_id").append(aux);
                     });
              	}                 

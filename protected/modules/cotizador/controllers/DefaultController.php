@@ -83,14 +83,15 @@ class DefaultController extends Controller
             $vehicle_s= Vehicle::model()->findByPk($_POST['vehicle_id']);
            $return= array();
             foreach($vehicle_version as $z=> $vehicle){
-               $return[$z]['id']=$vehicle->id;
-               $return[$z]['reference']=$vehicle->reference;
-               $return[$z]['motor']=$vehicle->motor;
-               $return[$z]['type']=$vehicle->type;
-               $return[$z]['transmission']=$vehicle->transmission;
-               $return[$z]['combustion']=$vehicle->combustion;
-               $return[$z]['ac']=$vehicle->ac;
-			    $return[$z]['abs']=$vehicle->abs;
+				$return[$z]['id']=$vehicle->id;
+				$return[$z]['reference']=$vehicle->reference;
+				$return[$z]['motor']=$vehicle->motor;
+				$return[$z]['type']=$vehicle->type;
+				$return[$z]['transmission']=$vehicle->transmission;
+				$return[$z]['combustion']=$vehicle->combustion;
+				$return[$z]['ac']=$vehicle->ac;
+				$return[$z]['abs']=$vehicle->abs;
+                $return[$z]['price']=$vehicle->final_price;
            }
            $return['image']=$vehicle_image->description;
            $return['name']=$vehicle_s->name;
@@ -105,7 +106,7 @@ class DefaultController extends Controller
                 $return[$z]['id']=$concessioner->id;
                 $return[$z]['name']=$concessioner->name;
                 $return[$z]['address']=$concessioner->address;
-                 $return[$z]['phone']=$concessioner->phone;
+                $return[$z]['phone']=$concessioner->phone;
              }
                 }
          
@@ -115,7 +116,7 @@ class DefaultController extends Controller
             
                     $client = New Client;
                     $client->attributes=$_POST['Client'];
-                    if($client->save()){
+                    /*if($client->save()){
                     $quotation= new Quotation;
                     $quotation->attributes=$_POST['Quotation'];
                     $quotation->client_id=$client->primaryKey;
@@ -141,7 +142,9 @@ class DefaultController extends Controller
                     else{
                         echo json_encode(false);
                     }
-                    }
+                    }*/
+                    $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));
+                    echo json_encode(true);
        
         }
         
