@@ -430,7 +430,14 @@ $cities= City::model()->findAll();
 			        $("#aw_cont").hide();
 			    }else {
 			        if($(this).val() === "Mantenimiento Periódico"){
-			            $("#additional_work").show();
+			        	if($('input[name=btn]:checked').val()=='Normal'){
+			        		$("#additional_work").show();
+							$("#additional_work2").hide();
+			        	}
+			        	else{
+			        		$("#additional_work").hide();
+							$("#additional_work2").show();
+			        	}
 			            $("#title_additional_work").html("Trabajo adicional:");
 			            $("#km_work").show();  
 			            $("#aw_cont").hide();
@@ -439,6 +446,7 @@ $cities= City::model()->findAll();
 			        else{	
 			        	$("#title_additional_work").html("Descripción");
 			          	$("#additional_work").show();      
+			          	$("#additional_work2").hide();      
 			            $("#km_work").hide();
 			            $("#aw_cont").hide();
 			            $("#normal_express").hide();
