@@ -198,7 +198,7 @@ $cities= City::model()->findAll();
 					
                </td>
           </tr>
-          <tr>
+          <tr id="normal_express">
             <td colspan="5">
               	Normal
               	<?php 
@@ -240,7 +240,7 @@ $cities= City::model()->findAll();
 	              <h4 id="title_additional_work">Trabajo adicional:</h4>
 	              <textarea name="TechnicalDate[detail_work]"  style="width:300px"></textarea>
               </td>
-              <td id="additional_work2" style="display: none;" colspan="5">
+              <td id="additional_work2" style="display: none; text-align:justify" colspan="5">
               	Si su mantenimiento requiere trabajos adicionales, se debe agendar como Cita Normal
               </td>
           </tr>
@@ -349,11 +349,13 @@ $cities= City::model()->findAll();
     	
     	
     </div>
-  </div>  <div id="barra_localizador">
- <strong>*Mantenimiento periódico:</strong> Trabajos de acuerdo al kilometraje de su vehículo que buscan cuidar la vida útil de su vehículo y brindarle el mejor servicio. 
- <br/><strong>*Mecánica:</strong> Trabajo que se realiza a los vehículos cuando algún elemento ha sufrido algún daño, desperfecto o requiere diagnóstico mecánico para la corrección inmediata. <br/>
-Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su cita dependerá de la <br/>disponibilidad de nuestros Centros de Servicio.</br>Tenemos m&aacute;s de 20 concesionarios a nivel nacional, y estaremos gustosos en atenderle.
-  </div>
+</div>
+<div id="barra_localizador">
+	<strong>*Mantenimiento Express:</strong> Son los mantenimientos periódicos que no requieren trabajos adicionales.<br/>
+ 	<strong>*Mantenimiento periódico:</strong> Trabajos de acuerdo al kilometraje de su vehículo que buscan cuidar la vida útil de su vehículo y brindarle el mejor servicio.<br/>
+ 	<strong>*Mecánica:</strong> Trabajo que se realiza a los vehículos cuando algún elemento ha sufrido algún daño, desperfecto o requiere diagnóstico mecánico para la corrección inmediata. <br/>
+	Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su cita dependerá de la <br/>disponibilidad de nuestros Centros de Servicio.</br>Tenemos m&aacute;s de 20 concesionarios a nivel nacional, y estaremos gustosos en atenderle.
+</div>
 
 
     <?php $this->endWidget(); ?>
@@ -422,32 +424,32 @@ Su cita debe ser agendada con 48 horas de anticipación. El agendamiento de su c
 				$('#km_work_select').html(html);
 			})
             $("#work").change(function(){
-              if( $(this).val() === "Mantenimiento Preventivo"){
-       
-           $("#additional_work").hide();  
-                       $("#km_work").show();  
-                       $("#aw_cont").hide();
-
-    }else {
-        if($(this).val() === "Mantenimiento Periódico"){
-             $("#additional_work").show();  		$("#title_additional_work").html("Trabajo adicional:");
-                       $("#km_work").show();  
-                       $("#aw_cont").hide();  
-        }
-    
-        else{	$("#title_additional_work").html("Descripción");
-
-          $("#additional_work").show();      
-                        $("#km_work").hide();
-                         $("#aw_cont").hide();
-
-    }if($(this).val() === "Diagnóstico Técnico"){
-	  $("#additional_work").hide();  
-                       $("#km_work").show();  
-                       $("#aw_cont").hide();
-	}
+              	if( $(this).val() === "Mantenimiento Preventivo"){
+			        $("#additional_work").hide();  
+			        $("#km_work").show();  
+			        $("#aw_cont").hide();
+			    }else {
+			        if($(this).val() === "Mantenimiento Periódico"){
+			            $("#additional_work").show();
+			            $("#title_additional_work").html("Trabajo adicional:");
+			            $("#km_work").show();  
+			            $("#aw_cont").hide();
+			            $("#normal_express").show();
+			        }
+			        else{	
+			        	$("#title_additional_work").html("Descripción");
+			          	$("#additional_work").show();      
+			            $("#km_work").hide();
+			            $("#aw_cont").hide();
+			            $("#normal_express").hide();
+				    }
+				    if($(this).val() === "Diagnóstico Técnico"){
+					  	$("#additional_work").hide();  
+				        $("#km_work").show();  
+				        $("#aw_cont").hide();
+					}
                
-    }      });
+    			}      });
     $("#person_select").change(function(){
               if( $(this).val() === '0'){
         $("#title_client_info").html("Información Personal");
