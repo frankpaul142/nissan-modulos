@@ -30,12 +30,12 @@ $cities= City::model()->findAll();
             	<select name="city" id="city" style="width:250px">
                     <option value="0">Selecciona una ciudad</option>
 									<?php foreach ($cities as $city): ?>
-                                                                        <?php if($city->id != 21){ ?>
+                                                                        
                                                                         <?php if(isset($city_id)&&$city_id==$city->id){ ?>
                                                                           <option selected="true" value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
                                                                         <?php }else{ ?>
                                                                                    <option value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
-                                                                        <?php  }?>
+                                                                        
                                                                         <?php } endforeach; ?>
                 </select>
             </td>
@@ -387,7 +387,7 @@ $cities= City::model()->findAll();
                     },
                      success: function(data) {
                     $.map( data, function( val, i ) {
-                        if(val.id!=='2'&& val.id!=='4'&& val.id!=='10'&& val.id!=='11'&& val.id!=='14'&& val.id!=='20'){
+                        if(val.id!=='2'&& val.id!=='4'&& val.id!=='10'&& val.id!=='11'&& val.id!=='14'){
                         var aux= $("<option></option>");
                         aux.attr("value",val.id);
                         aux.html(val.name+" ("+val.address+")");

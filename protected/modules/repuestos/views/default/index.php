@@ -63,12 +63,11 @@ $cities= City::model()->findAll();
             	<select name="city" id="city" style="width:250px">
                  <option value="0">Selecciona una ciudad</option>
 									<?php foreach ($cities as $city): ?>
-                                                                        <?php  if($city->id != 21){ ?>
+                                                                        
                                                                         <?php if(isset($city_id)&&$city_id==$city->id){ ?>
                                                                           <option selected="true" value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
                                                                         <?php }else{ ?>
                                                                                    <option value="<?php echo $city->id ?>"><?php echo $city->name ?></option>
-                                                                        <?php  } ?>
                                                                         <?php  } 
                                                                         
                                                                         endforeach; ?>
