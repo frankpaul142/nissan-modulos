@@ -102,7 +102,7 @@ class DefaultController extends Controller
             $city= City::model()->findByPk($_POST['city_id']);
             $return= array();
             foreach($city->concessioners as $z => $concessioner){
-             if($concessioner->id !=3 && $concessioner->id !=4){
+             if($concessioner->id !=3 && $concessioner->id !=4 && $concessioner->id !=11 && $concessioner->id !=14){
                 $return[$z]['id']=$concessioner->id;
                 $return[$z]['name']=$concessioner->name;
                 $return[$z]['address']=$concessioner->address;
