@@ -280,7 +280,7 @@ $cities= City::model()->findAll();
                     },
                      success: function(data) {
                     $.map( data, function( val, i ) {
-                        if(val.id!=='3' && val.id!=='4'){
+                        if(val.id!=='3' && val.id!=='4' && val.id!=='11' && val.id!=='14'){
                         var aux= $("<option></option>");
                         aux.attr("value",val.id);
                          aux.html(val.name+" ("+val.address+")");

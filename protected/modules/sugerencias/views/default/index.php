@@ -251,12 +251,12 @@ $cities= City::model()->findAll();
 	  </tr>
 	  <tr>
             <td>
-		  <select name="Suggestion[type2]" style="width:250px">
-                    <option>Vehículos Nuevos</option>
-                    <option>Servicio Técnico</option>
-                    <option>Repuestos</option>
-		    <option>Otros</option>
-                </select>    
+		  	<select name="Suggestion[type2]" style="width:250px" id="selectServicio">
+                <option>Vehículos Nuevos</option>
+                <option>Servicio Técnico</option>
+                <option>Repuestos</option>
+	    		<option>Otros</option>
+            </select>    
             </td>
           </tr>   
  	      
@@ -389,20 +389,25 @@ $cities= City::model()->findAll();
                
             });  
         $("#concessioner").change(function(){
-            if($("#city").val()==="11"){
-              if( $(this).val() === "5" || $(this).val() === "6" || $(this).val() === "7"){
-       
-          
-                       $("#pyp").hide();      
+            /*if($("#city").val()==="11"){
+              	if( $(this).val() === "5" || $(this).val() === "6" || $(this).val() === "7"){
+                    $("#pyp").hide();      
+    			}else{
+                    $("#pyp").show();
+    			}
+            }*/
+            var options='<option>Vehículos Nuevos</option>'+
+                '<option>Servicio Técnico</option>'+
+                '<option>Repuestos</option>'+
+	    		'<option>Otros</option>';
+            if($(this).val()=='11' || $(this).val()=='14'){
+            	options='<option>Vehículos Nuevos</option>'+
+                '<option>Servicio Técnico</option>'+
+	    		'<option>Otros</option>';
+            }
+            $('#selectServicio').html(options);
+        });
 
-    }else{
-
-      
-                        $("#pyp").show();
-
-    }
-            }       
-            }); 
     $("#aw").change(function() {  
         if($("#aw").is(':checked')) {  
             $("#additional_work").show();
