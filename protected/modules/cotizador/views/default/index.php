@@ -8,6 +8,7 @@
 <link href="<?php echo Yii::app()->request->getBaseUrl(true); ?>/css/queries-cotizador.css" rel="stylesheet" type="text/css" />
 
 <script src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/js/fotorama.js"></script>
+
 </head>
 <body>
 	<div class="contenido-cotiza">
@@ -97,7 +98,7 @@
                 <div class="carro-cotizar">
                     <div class="info-formulario">
                         <span class="tit-formulario">Modelo de preferencia</span>
-                        <div class='selectBox'>
+           a             <div class='selectBox'>
               <select id="vehicle_1" class="select-n">
                   <option value="" selected="selected">selecciona un vehículo</option>
                      <?php foreach($vehicles as $vehicle): ?>           
