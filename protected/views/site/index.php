@@ -202,19 +202,17 @@ $cities= City::model()->findAll();
             <td colspan="5">
               	Normal
               	<?php 
-	            echo CHtml::radioButton('btn', false, array(
+	            echo CHtml::radioButton('tdne', false, array(
 	            'id'=>'btn-1',
 	            'value'=>'Normal',
-	            'name'=>'btnname',
 	            'uncheckValue'=>null
 		        )); ?>
 		        Express
 		        <?php
-		          	echo CHtml::radioButton('btn', false, array(
+		          	echo CHtml::radioButton('tdne', false, array(
 		          		'id'=>'btn-2',
-						'value'=>'Express',
-		              	'name'=>'btnname',
-		              	'uncheckValue'=>null
+						      'value'=>'Express',
+		              'uncheckValue'=>null
 					));
 			    ?>
             </td>

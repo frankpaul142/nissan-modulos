@@ -79,8 +79,11 @@ class SiteController extends Controller
                     $vehicle->save();
                     $technicaldate= new TechnicalDate;
                     $technicaldate->attributes=$_POST['TechnicalDate'];
-                    $technicaldate->client_id=$client->primaryKey;;
-                    $technicaldate->vehicle_id=$vehicle->primaryKey;;
+                    $technicaldate->client_id=$client->primaryKey;
+                    $technicaldate->vehicle_id=$vehicle->primaryKey;
+                    if($technicaldate->work=='Mantenimiento Periódico' && isset($_POST['tdne'])){
+                    	$technicaldate->work.=' '.$_POST['tdne'];
+                    }
                     if($technicaldate->save()){
 						$message = new YiiMailMessage;
 						$message->view = 'agendamiento';
@@ -98,7 +101,8 @@ class SiteController extends Controller
 				Yii::app()->mail->send($message);
                 $this->render('result',array("client"=>$client,"vehicle"=>$vehicle,"technicaldate"=>$technicaldate));
                }else{
-			   $this->render('error');
+               		//print_r($technicaldate->getErrors());
+			   		$this->render('error');
 			   } 
                  
                 }
