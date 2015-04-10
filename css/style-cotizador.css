@@ -47,22 +47,25 @@ blockquote:before, blockquote:after, q:before, q:after {content: ""}
 }
 .barra-btn{
 	width:100%;
-	height:70px;
+	height:100px;
 	float:left;
 	}
 .barra-btn img{
 	margin-left:7px;
 	}	
 .titulo-auto{
-	width:302px;
-	height:38px;
-	padding:10px 35px 0 0;
-	background-color:#000000;
-	float:left;
-	color:#FFF;
-	text-align:right;
-	font-size:32px;
-	margin:40px 0 10px 0;
+	width: 302px;
+height: 38px;
+padding: 10px 0 0 35px;
+background-color: #000000;
+background-image: url(../images/f-bordenegro.jpg);
+background-position: right;
+background-repeat: no-repeat;
+float: left;
+color: #FFF;
+text-align: left;
+font-size: 32px;
+margin: 0px 0 10px 0;
 	}
 .titulo-auto2{
 width: 302px;

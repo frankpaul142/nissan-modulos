@@ -112,12 +112,12 @@ width: 70%;
 	width: 95%;
 	margin: 5px 2.5%;
 	}
-.titulo-auto {
+/*.titulo-auto {
 font-size: 20px;
 margin: 0px 0 10px 0;
 width: 95%;
 padding: 10px 5% 0 0;
-}	
+}	*/
 .cont-cotizador {
 width: 95%;
 	margin: 5px 2.5%;
@@ -133,7 +133,7 @@ width: 98%;
 float: left;
 margin:0 1%;
 }
-.titulo-auto2{
+.titulo-auto1{
     width: 100%;
 }  
 .carro-cotizar-der {
