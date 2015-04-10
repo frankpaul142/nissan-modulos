@@ -133,6 +133,15 @@ width: 98%;
 float: left;
 margin:0 1%;
 }
+.titulo-auto2{
+    width: 100%;
+}  
+.carro-cotizar-der {
+  width: 100%;}
+iframe.ifra {
+  height: 1200px;
+  overflow-x: hidden;
+}    
 	}
 /**/
 @media screen and (max-width: 360px) {

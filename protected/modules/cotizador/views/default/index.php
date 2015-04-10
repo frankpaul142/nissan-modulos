@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,7 +40,7 @@
 
                 	</div>
                 </div>
-        <div id="car_name" class="titulo-auto">Escoja un modelo</div>
+        <div id="car_name" class="titulo-auto2">Escoja un modelo</div>
           <div id="car_name3" class="titulo-auto" style="display: none;">Escoja un modelo</div>
                             <div class="img-auto">
                         <div id="first_car_cont" class="auto1"><img id="first_car_img" src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/auto-cotizador.jpg" width="438" height="295" alt="auto nissan"/></div>
