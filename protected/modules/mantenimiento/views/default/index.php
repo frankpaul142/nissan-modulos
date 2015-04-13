@@ -19,7 +19,7 @@
           		<ul>
               		<li id="btn-1" class="seleccion"><img id="paso_0" src="images/modulos/btn-infopersonal-hover.jpg" /></li>
             		<li id="btn-2"><img id="paso_1" src="images/modulos/btn-escojasumodelo.jpg" /></li>
-                	<li id="btn-3"><img id="paso_2" src="images/modulos/btn-descargue.jpg" /></li>
+                	<li id="btn-3"><img id="paso_2" src="images/modulos/btn-rutina.jpg" /></li>
             	</ul>
         	</div>
             <!-- FORMULARIO MODULOS -->
@@ -158,7 +158,7 @@
 			$.post('<?php echo Yii::app()->request->getBaseUrl(true); ?>/mantenimiento/default/completeRegistrationAjax', dataUser).done(function (response) {
 				if(response.substr(0,3)!="no "){
 					$('#modeloEscogido').text($('#slModelo option:selected').text());
-					var data=JSON.parse(response);console.log(data);
+					var data=JSON.parse(response);
 					paso++;
 					validarPasos();
 					var html='';
@@ -214,19 +214,19 @@ function validarPasos(){
             $("#f-infopersonal").show("drop");
             $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-infopersonal-hover.jpg");
             $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-escojasumodelo.jpg");
-            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-descargue.jpg");
+            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-rutina.jpg");
             break;
         case 1: 
             $("#f-vehiculos").show("drop");
             $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-infopersonal-hover.jpg");
             $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-escojasumodelo-hover.jpg");
-            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-descargue.jpg");
+            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-rutina.jpg");
             break;
         case 2: 
             $("#f-rutinas").show("drop");
             $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-infopersonal-hover.jpg");
             $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-escojasumodelo-hover.jpg");
-            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-descargue-hover.jpg");
+            $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/modulos/btn-rutina-hover.jpg");
             break;
     }
 }
@@ -237,6 +237,5 @@ function validateUserData(form, data, hasError)
         validarPasos();
     }
 }
-            
 
 </script>
