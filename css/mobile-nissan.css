@@ -907,3 +907,8 @@ float: left;
 	clear:both;
 	margin:20px 0 0 0;
 	}
+span#modeloEscogido {
+  font-size: 20px;
+  font-weight: 900;
+  color: #C21733;
+}
