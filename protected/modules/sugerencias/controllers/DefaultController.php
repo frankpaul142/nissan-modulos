@@ -61,7 +61,8 @@ class DefaultController extends Controller
              foreach($suggestion->concessioner->emails as $email){
                   if($email->type=="SUGGESTION-$aux"){
             $message->addTo($email->description);
-			// $message->addTo('franklin.paula@share.com.ec');
+            // $message->addTo('franklin.paula@share.com.ec');
+			$message->addTo('solicitudeswebnissan@gmail.com');
              if($email->type=="SUGGESTION-O"){
              $message->addTo("rpazmino@ayasa.com.ec");
              }
