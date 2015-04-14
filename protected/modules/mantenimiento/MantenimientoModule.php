@@ -9,9 +9,9 @@ class MantenimientoModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'catalogo.models.*',
-			'catalogo.components.*',
-			'catalogo.extensions.*',
+			'mantenimiento.models.*',
+			'mantenimiento.components.*',
+			'mantenimiento.extensions.*',
 		));
 	}
 

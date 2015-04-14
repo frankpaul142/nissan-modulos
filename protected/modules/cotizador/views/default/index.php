@@ -54,16 +54,35 @@
 						<div id="precio1" style="display:none">
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado1"></label><br/>
-                        	<label class="title_co">Cuotas</label> 
-						   	<select>
-						   		<?php for($i=1;$i<=48;$i++){ ?>
-						   		<option value="<?php echo $i ?>"><?php echo $i ?></option>
-						   		<?php } ?>
+                        	<label class="title_co">Entidad Financiera</label> 
+						   	<select id="ifi1">
+								<option>Elija una opción</option>
+								<?php foreach ($banks as $i => $bank) { ?>	
+								<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
+								<?php } ?>
+							</select><br/>
+                        	<label class="title_co">Entrada Mínima</label>
+                        	<select id="entrada_minima1">
+								<option>Elija una opción</option>
+							</select><br/>
+                        	<label class="title_co">Cuotas</label>
+						   	<select id="cuotas1">
+						   		<option>Elija una opción</option>
 						   	</select><br/>
-                        	<label class="title_co">Cuota estimada</label> 
-						   	<label id="cuota_estimada1"></label><br/>
-                        	<label class="title_co">Precio Final</label> 
-						   	<label id="precio_final1"></label><br/>
+                        	<label class="title_co">Tasa de Interés</label> 
+						   	<label id="tasa_interes1">0</label><br/>
+                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
+						   	<label id="dispositivo1">0</label><br/>
+                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
+						   	<label id="gastos_administrativos1">0</label><br/>
+                        	<label class="title_co">Valor a Financiar Aprox.</label> 
+						   	<label id="valor_financiar1">0</label><br/>
+                        	<label class="title_co">Seguro Aprox. por <span id="spAnos1"></span> años</label> 
+						   	<label id="seguro1">0</label><br/>
+                        	<label class="title_co">Total a Financiar</label> 
+						   	<label id="total_financiar1">0</label><br/>
+                        	<label class="title_co">Cuota mensual estimada</label> 
+						   	<label id="cuota_estimada1">0</label><br/>
                         </div>
                         <div id="info_concessioner" class="info-concesionario" style="display:none;">
                             <div class="tit-concesionario">Concesionario</div>
@@ -98,7 +117,7 @@
                 <div class="carro-cotizar">
                     <div class="info-formulario">
                         <span class="tit-formulario">Modelo de preferencia</span>
-           a             <div class='selectBox'>
+                        <div class='selectBox'>
               <select id="vehicle_1" class="select-n">
                   <option value="" selected="selected">selecciona un vehículo</option>
                      <?php foreach($vehicles as $vehicle): ?>           
@@ -278,130 +297,149 @@
                         <div>
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado2"></label><br/>
+						   	<label class="title_co">Entidad Financiera</label> 
+						   	<select id="ifi2">
+								<option>Elija una opción</option>
+								<?php foreach ($banks as $i => $bank) { ?>	
+								<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
+								<?php } ?>
+							</select><br/>
+                        	<label class="title_co">Entrada Mínima</label>
+                        	<select id="entrada_minima2">
+								<option>Elija una opción</option>
+							</select><br/>
                         	<label class="title_co">Cuotas</label> 
-						   	<select>
-						   		<?php for($i=1;$i<=48;$i++){ ?>
-						   		<option value="<?php echo $i ?>"><?php echo $i ?></option>
-						   		<?php } ?>
+						   	<select id="cuotas2">
+						   		<option>Elija una opción</option>
 						   	</select><br/>
-                        	<label class="title_co">Cuota estimada</label> 
-						   	<label id="cuota_estimada2"></label><br/>
-                        	<label class="title_co">Precio Final</label> 
-						   	<label id="precio_final2"></label><br/>
+                        	<label class="title_co">Tasa de Interés</label> 
+						   	<label id="tasa_interes2">0</label><br/>
+                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
+						   	<label id="dispositivo2">0</label><br/>
+                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
+						   	<label id="gastos_administrativos2">0</label><br/>
+                        	<label class="title_co">Valor a Financiar Aprox.</label> 
+						   	<label id="valor_financiar2">0</label><br/>
+                        	<label class="title_co">Seguro Aprox. por <span id="spAnos2">0</span> años</label> 
+						   	<label id="seguro2">0</label><br/>
+                        	<label class="title_co">Total a Financiar</label> 
+						   	<label id="total_financiar2">0</label><br/>
+                        	<label class="title_co">Cuota mensual estimada</label> 
+						   	<label id="cuota_estimada2">0</label><br/>
                         </div>
                         <a href="#" class="btn-cotizadador" id="solicitar-nueva"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-cotizador.png"/></a>
                         <a href="http://nissan.com.ec/sp/web/nscuploader/gama-nissan.html" target="_blank" class="btn-cotizadador"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-gamaautos.png" style="margin-left: 25px;"/></a>
                     </div>
                 </div>
-        </div>
-    </div>
-
-</div>
+        	</div>
+    	</div>
+	</div>
 	<div class="footer-n">Los colores son referenciales. Las especificaciones y precios de los vehículos pueden variar sin previo aviso.</div>
 <script type='text/javascript'>
-  var paso=0;
+  	var paso=0;
+  	var banks;
+  	$.get('<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadBanks').success(function (data) {
+  		//console.log(data);
+  		banks=JSON.parse(data);
+  	});
 
-			$(document).ready(function() {
-			      $("#solicitar-nueva").click(function(){
-                                    location.reload();
-                                     });
-            <?php if($modelo!=''){ ?>
-              $('#vehicle_1').val(<?php echo $modelo ?>);
-              $("#Quotation_vehicle_version_id").html("");
-                  $.ajax({
-                    url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
-                    cache: false,
-                    type: "POST",
-                    dataType: "json", 
-                    async: false,
-                    data:{
-                        vehicle_id:$('#vehicle_1').val()
-                    },
-                     success: function(data) {
+	$(document).ready(function() {
+		$("#solicitar-nueva").click(function(){
+            location.reload();
+        });
+
+        <?php if($modelo!=''){ ?>
+            $('#vehicle_1').val(<?php echo $modelo ?>);
+            $("#Quotation_vehicle_version_id").html("");
+            $.ajax({
+                url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
+                cache: false,
+                type: "POST",
+                dataType: "json", 
+                async: false,
+                data:{
+                	vehicle_id:$('#vehicle_1').val()
+                },
+                success: function(data) {
                     $.map( data, function( val, i ) {
-                        console.log(val);
+                        //console.log(val);
                         if(val.id){
-                        var z="";
-                         var y="";
-                        if(val.ac=='YES')
-                         {
-                          z="AC";
-                         }
-                           if(val.abs=='YES')
-                         {
-                          y="ABS";
-                         }
-                        var aux= $("<option></option>");                
-                        aux.attr("class","selectOption");
-                         aux.attr("value",val.id);
-                        aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
-                        $("#Quotation_vehicle_version_id").append(aux);
-                        $('#precio_contado1').text('$'+val.price);
+                        	var z="";
+                         	var y="";
+                        	if(val.ac=='YES') {
+                          		z="AC";
+                         	}
+                           	if(val.abs=='YES') {
+                          		y="ABS";
+                         	}
+                        	var aux= $("<option></option>");                
+                        	aux.attr("class","selectOption");
+                         	aux.attr("value",val.id);
+                        	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
+                        	$("#Quotation_vehicle_version_id").append(aux);
+                        	$('#precio_contado1').text('$'+val.price);
                         }
                     });
-                          $("#car_name").html(data.name);
-                        $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
-                     }                  
-           });
-            <?php } ?>
-                                       $('#vehicle_1').change(function(){
-                   $("#Quotation_vehicle_version_id").html("");
-                            $.ajax({
-                      url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
-                    cache: false,
-                    type: "POST",
-                    dataType: "json", 
-                    async: false,
-                    data:{
-                        vehicle_id:$(this).val()
-                    },
-                     success: function(data) {
+                    $("#car_name").html(data.name);
+                    $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
+                }                  
+           	});
+        <?php } ?>
+		
+		$('#vehicle_1').change(function(){
+            $("#Quotation_vehicle_version_id").html("");
+            $.ajax({
+            	url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
+                cache: false,
+                type: "POST",
+                dataType: "json", 
+                async: false,
+                data:{
+                	vehicle_id:$(this).val()
+				},
+                success: function(data) {
                     $.map( data, function( val, i ) {
-                        console.log(val);
+                        //console.log(val);
                         if(val.id){
-                        var z="";
-                         var y="";
-                        if(val.ac=='YES')
-                         {
-                          z="AC";
-                         }
-                           if(val.abs=='YES')
-                         {
-                          y="ABS";
-                         }
-                        var aux= $("<option></option>");                
-                        aux.attr("class","selectOption");
-                         aux.attr("value",val.id);
-                        aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
-                        $("#Quotation_vehicle_version_id").append(aux);
-                        $('#precio_contado1').text('$'+val.price);
+                        	var z="";
+                         	var y="";
+                        	if(val.ac=='YES') {
+                          		z="AC";
+                         	}
+                           	if(val.abs=='YES') {
+                          		y="ABS";
+                         	}
+                        	var aux= $("<option></option>");                
+                        	aux.attr("class","selectOption");
+                         	aux.attr("value",val.id);
+                        	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
+                        	$("#Quotation_vehicle_version_id").append(aux);
+                        	$('#precio_contado1').text('$'+val.price);
                         }
                     });
-                          $("#car_name").html(data.name);
-                        $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
-                     }                  
-           });
-            });  
+                    $("#car_name").html(data.name);
+                    $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
+                }                  
+           	});
+        });
 
-
-
-                        $("#city").change(function(event){
-                   $("#Quotation_concessioner_id").html("");
-                            $.ajax({
-                      url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadConcessioner",
-                   cache: false,
-                    type: "POST",
-                    dataType: "json", 
-                    async: false,
-                    data:{
-                        city_id:$('#city').val()
-                   },
-                     success: function(data) {
-                         var def =$("<option></option>");
-                         def.val("");
-                        // def.attr("disabled","disabled");
-                         def.html("Seleciona un concesionario");
-                         $("#Quotation_concessioner_id").append(def);
+		$("#city").change(function(event){
+            $("#Quotation_concessioner_id").html("");
+            $.ajax({
+            	url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadConcessioner",
+                cache: false,
+                type: "POST",
+                dataType: "json", 
+                async: false,
+                data:{
+                	city_id:$('#city').val()
+                },
+                success: function(data) {
+                	var def =$("<option></option>");
+                    def.val("");
+                    // def.attr("disabled","disabled");
+                    def.html("Seleciona un concesionario");
+                    $("#Quotation_concessioner_id").append(def);
                     $.map( data, function( val, i ) {                 
                         var aux= $("<option></option>");
                         aux.attr("value",val.id);
@@ -411,165 +449,311 @@
                         aux.html(val.name+" ("+val.address+")");
                         $("#Quotation_concessioner_id").append(aux);
                     });
-                     }                       
-           });
-            });
+                }                       
+           	});
+        });
 
-
-
-                                       $('#vehicle_2').change(function(){
-                   $("#Quotation_vehicle_version_id2").html("");
-                            $.ajax({
-                      url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
-                   cache: false,
-                    type: "POST",
-                    dataType: "json", 
-                    async: false,
-                    data:{
-                        vehicle_id:$(this).val()
-                    },
-                     success: function(data) {
+		$('#vehicle_2').change(function(){
+            $("#Quotation_vehicle_version_id2").html("");
+            $.ajax({
+            	url: "<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadVersionVehicle",
+                cache: false,
+                type: "POST",
+                dataType: "json", 
+                async: false,
+                data:{
+                	vehicle_id:$(this).val()
+                },
+                success: function(data) {
                     $.map( data, function( val, i ) {
-                       if(val.id){
-                           var z="";
-                         var y="";
-                        if(val.ac=='YES')
-                         {
-                          z="AC";
-                         }
-                           if(val.abs=='YES')
-                         {
-                          y="ABS";
-                         }
-                        var aux= $("<option></option>");
-                        aux.attr("class","selectOption");
-                         aux.attr("value",val.id);
-                        aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
-                        $("#Quotation_vehicle_version_id2").append(aux);
-                        $('#precio_contado2').text('$'+val.price);
-                       }
+                       	if(val.id){
+                           	var z="";
+                         	var y="";
+                        	if(val.ac=='YES') {
+                          		z="AC";
+                         	}
+                           	if(val.abs=='YES') {
+                          		y="ABS";
+                         	}
+                        	var aux= $("<option></option>");
+                        	aux.attr("class","selectOption");
+                         	aux.attr("value",val.id);
+                        	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
+                        	$("#Quotation_vehicle_version_id2").append(aux);
+                        	$('#precio_contado2').text('$'+val.price);
+                       	}
                     });
-            $("#car_name2").html(data.name);
-             $("#car_name3").html(data.name);
-	  $("#second_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
-            $("#car_second_final").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
-                     }
-           });
-            });  
-
-			         $('#btn-c').click(function(){
-                                  $('#first_car_cont').show();
-                                 $('#second_car_cont').hide();
-                                 $("#car_name").show();
-                                 $("#car_name3").hide();
-                                   });
-                                $('#btn-c2').click(function(){
-                                 $('#first_car_cont').hide();
-                                 $('#second_car_cont').show();
-                                  $("#car_name3").show();
-                                 $("#car_name").hide();
-                                   });
-                                    $('#Quotation_concessioner_id').change(function(){
-                                   $('#name_concessioner').html( $('option:selected', this).attr('name_c'));
-                                   $('#address_concessioner').html( $('option:selected', this).attr('address'));
-                                   $('#phone_concessioner').html( $('option:selected', this).attr('phone'));
-                                    $("#info_concessioner").show("drop");
-                                   });
-                        });
-$(function() {   
- $(".form").attr("style", "visibility: visible");
-    validarPasos();    
-   // $(".btnSiguiente, .btnAtras, #btnRegistrar").button();
-
-$(".btnAtras").click(function(){
-    paso--;
-    validarPasos();
-});
-});
-
-
-
-function validarPasos(){    
-    $(".form").hide();        
-    switch(paso){
-
-        case 0: 
-                $("#cotizacion").show("drop");
-                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
-                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2.jpg");
-                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3.jpg");
-                break;
-        case 1: 
-                $("#donde-comprar").show("drop");
-                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
-                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
-                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3.jpg");
-                break;
-        case 2: 
-                $("#info-usuario").show("drop");
-                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
-                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
-                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3over.jpg");
-                break;
-         case 3:   
-                register();
-                $("#solicitud-finalizada").show("drop");
-                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
-                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
-                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3over.jpg");
-                $("#paso_0").hide();
-                $("#paso_1").hide();
-                $("#paso_2").hide();
-                $("#btn-c").hide();
-                $("#btn-c2").hide();
-				$("#text_end").show();
-				$("#precio1").show();
-                break;
-        default: $("#cotizacion").show("drop");
-                break; 
-    }
-}
-function validateUserData(form, data, hasError)
-{   
-    if(!hasError){
-        paso++;
-        validarPasos();
-    }
-}
-function register(){
-    console.log("registrando");
-    var dataUser=$("#client-form").serialize();
-    var dataConcessioner=$("#concessioner-form").serialize();
-    var dataVehicle= $("#vehicle-version-form").serialize();
-    $.ajax({
-         type: 'POST',
-         url: '<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/completeRegistrationAjax',
-         data:dataUser+"&"+dataConcessioner+"&"+dataVehicle,
-         dataType:'json',
-         success:function(data){
-                $("#mensajeRegistro").html(data["transactionMessage"]);
-                if(data["login"]){
-                    window.location.href = "<?php echo Yii::app()->createAbsoluteUrl("community/planrecommended") ?>";
+            		$("#car_name2").html(data.name);
+             		$("#car_name3").html(data.name);
+	  				$("#second_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
+            		$("#car_second_final").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
                 }
-               },
-         error: function(data) { // if error occured
-                 $("#mensajeRegistro").html(data);
-                 }
-    });
-}
-            $('.number').keydown(function(event) {
-                // Allow special chars + arrows 
-                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 
-                    || event.keyCode == 27 || event.keyCode == 13 
-                    || (event.keyCode == 65 && event.ctrlKey === true) 
-                    || (event.keyCode >= 35 && event.keyCode <= 39)){
-                        return;
-                }else {
-                    // If it's not a number stop the keypress
-                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-                        event.preventDefault(); 
-                    }   
-                }
-            });
+           	});
+        });  
+
+		$('#btn-c').click(function(){
+        	$('#first_car_cont').show();
+            $('#second_car_cont').hide();
+            $("#car_name").show();
+            $("#car_name3").hide();
+        });
+
+        $('#btn-c2').click(function(){
+        	$('#first_car_cont').hide();
+            $('#second_car_cont').show();
+            $("#car_name3").show();
+            $("#car_name").hide();
+        });
+
+        $('#Quotation_concessioner_id').change(function(){
+        	$('#name_concessioner').html( $('option:selected', this).attr('name_c'));
+            $('#address_concessioner').html( $('option:selected', this).attr('address'));
+            $('#phone_concessioner').html( $('option:selected', this).attr('phone'));
+            $("#info_concessioner").show("drop");
+        });   
+ 
+ 		$(".form").attr("style", "visibility: visible");
+    	validarPasos();
+
+		$(".btnAtras").click(function(){
+		    paso--;
+		    validarPasos();
+		});
+
+		$('.number').keydown(function(event) {
+            // Allow special chars + arrows 
+            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 
+                || event.keyCode == 27 || event.keyCode == 13 
+                || (event.keyCode == 65 && event.ctrlKey === true) 
+                || (event.keyCode >= 35 && event.keyCode <= 39)){
+                    return;
+            }else {
+                // If it's not a number stop the keypress
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                    event.preventDefault(); 
+                }   
+            }
+        });
+
+        $('#ifi1').change(function () {
+        	var banco=$(this).val();
+        	var html='<option>Elija una opción</option>';
+        	var html2='<option>Elija una opción</option>';
+        	if(typeof(banks)!=='undefined' && banco!='Elija una opción'){
+        		var entradaMinima=parseInt(banks[banco]['entrada']);
+        		var precio_contado=parseFloat($('#precio_contado1').text().substr(1));
+        		for(var i=entradaMinima; i<entradaMinima+50; i+=5){
+        			valor=i/100*precio_contado;
+        			html+='<option value="'+valor+'">'+i+'% - '+valor.toFixed(2)+' USD</option>';
+        		}
+        		for(var i=parseInt(banks[banco]['plazo_min']); i<=parseInt(banks[banco]['plazo_max']); i+=6){
+        			html2+='<option value="'+i+'">'+i+'</option>';
+        		}
+        	}
+        	$('#entrada_minima1').html(html);
+        	$('#cuotas1').html(html2);
+        	cero(1);
+        });
+        $('#ifi2').change(function () {
+        	var banco=$(this).val();
+        	var html='<option>Elija una opción</option>';
+        	var html2='<option>Elija una opción</option>';
+        	if(typeof(banks)!=='undefined' && banco!='Elija una opción'){
+        		var entradaMinima=parseInt(banks[banco]['entrada']);
+        		var precio_contado=parseFloat($('#precio_contado2').text().substr(1));
+        		for(var i=entradaMinima; i<entradaMinima+50; i+=5){
+        			valor=i/100*precio_contado;
+        			html+='<option value="'+valor+'">'+i+'% - '+valor.toFixed(2)+' USD</option>';
+        		}
+        		for(var i=parseInt(banks[banco]['plazo_min']); i<=parseInt(banks[banco]['plazo_max']); i+=6){
+        			html2+='<option value="'+i+'">'+i+'</option>';
+        		}
+        	}
+        	$('#entrada_minima2').html(html);
+        	$('#cuotas2').html(html2);
+        	cero(2);
+        });
+        $('#cuotas1').change(function () {
+        	var num_cuotas=$('#cuotas1').val();
+        	var banco=$('#ifi1').val();
+        	var entrada=$('#entrada_minima1').val();
+        	var noValido='Elija una opción';
+        	if(num_cuotas!=noValido && banco!=noValido && entrada!=noValido){
+        		calcular(num_cuotas,banco,entrada,1);
+        	}
+        	else{
+        		cero(1);
+        	}
+        });
+        $('#cuotas2').change(function () {
+        	var num_cuotas=$('#cuotas2').val();
+        	var banco=$('#ifi2').val();
+        	var entrada=$('#entrada_minima2').val();
+        	var noValido='Elija una opción';
+        	if(num_cuotas!=noValido && banco!=noValido && entrada!=noValido){
+        		calcular(num_cuotas,banco,entrada,2);
+        	}
+        	else{
+        		cero(2);
+        	}
+        });
+        $('#entrada_minima1').change(function () {
+        	var num_cuotas=$('#cuotas1').val();
+        	var banco=$('#ifi1').val();
+        	var entrada=$('#entrada_minima1').val();
+        	var noValido='Elija una opción';
+        	if(num_cuotas!=noValido && banco!=noValido && entrada!=noValido){
+        		calcular(num_cuotas,banco,entrada,1);
+        	}
+        	else{
+        		cero(1);
+        	}
+        });
+        $('#entrada_minima2').change(function () {
+        	var num_cuotas=$('#cuotas2').val();
+        	var banco=$('#ifi2').val();
+        	var entrada=$('#entrada_minima2').val();
+        	var noValido='Elija una opción';
+        	if(num_cuotas!=noValido && banco!=noValido && entrada!=noValido){
+        		calcular(num_cuotas,banco,entrada,2);
+        	}
+        	else{
+        		cero(2);
+        	}
+        });
+	});
+
+	function calcular (num_cuotas,banco,entrada,modelo) {
+		var interes=parseFloat(banks[banco]['tasa']);
+		var interes_mensual=interes/1200;
+		var precio_contado=parseFloat($('#precio_contado'+modelo).text().substr(1));
+		var prestado=precio_contado-entrada;
+		var dispositivo=450;
+		var dominio=350;
+		var gastos_administrativos=0.02*prestado;
+		var depreciacion=0.15;
+		var tasa_seguro=parseFloat(banks[banco]['tasa_seguro']);
+		var tasa_seguro_parcial=tasa_seguro+0.78;
+		var tasa_seguro_total=0;
+		var seguro=parseInt(banks[banco]['seguro']);
+		if(seguro==99){
+			var aux_plazo_anios=Math.round(num_cuotas/12);
+		}
+		else{
+			var aux_plazo_anios=seguro;
+		}
+		for(i=1; i<=aux_plazo_anios; i++){
+			tasa_seguro_total+=tasa_seguro_parcial;										
+			tasa_seguro_parcial*=1-depreciacion;
+		}
+		tasa_seguro=tasa_seguro_total/100;
+		seguro=tasa_seguro*precio_contado;
+		seguro_aux=(tasa_seguro*precio_contado)/aux_plazo_anios;
+		
+		prestado+=dominio+dispositivo+gastos_administrativos;								
+		
+		var total_financiar=prestado;
+		var cuota=total_financiar*(interes_mensual/(1-Math.pow(1+interes_mensual,-num_cuotas))); //monthly payment
+		
+		var cuota_seguro=pmt(5.5/1200, 12, (-1)*seguro_aux);
+		
+		cuota+=cuota_seguro;
+		
+		total_pagar=cuota * num_cuotas;  //total amount paid at end of loan
+		total_intereses=total_pagar-total_financiar;         //total amount of interest paid at end of loan
+
+		$('#tasa_interes'+modelo).text('$'+interes.toFixed(2));
+		$('#dispositivo'+modelo).text('$'+dispositivo.toFixed(2));
+		$('#gastos_administrativos'+modelo).text('$'+gastos_administrativos.toFixed(2));
+		$('#valor_financiar'+modelo).text('$'+prestado.toFixed(2));
+		$('#seguro'+modelo).text('$'+seguro.toFixed(2));
+		$('#total_financiar'+modelo).text('$'+total_financiar.toFixed(2));
+		$('#cuota_estimada'+modelo).text('$'+cuota.toFixed(2));
+		$('#spAnos'+modelo).text(aux_plazo_anios);
+
+	}
+
+	function cero (modelo) {
+		$('#tasa_interes'+modelo).text('0');
+		$('#dispositivo'+modelo).text('0');
+		$('#gastos_administrativos'+modelo).text('0');
+		$('#valor_financiar'+modelo).text('0');
+		$('#seguro'+modelo).text('0');
+		$('#total_financiar'+modelo).text('0');
+		$('#cuota_estimada'+modelo).text('0');
+	}
+
+	function pmt(i, n, p) {
+		return i * p * Math.pow((1 + i), n) / (1 - Math.pow((1 + i), n));
+	}
+
+	function validarPasos(){    
+	    $(".form").hide();        
+	    switch(paso){
+
+	        case 0: 
+	                $("#cotizacion").show("drop");
+	                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
+	                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2.jpg");
+	                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3.jpg");
+	                break;
+	        case 1: 
+	                $("#donde-comprar").show("drop");
+	                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
+	                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
+	                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3.jpg");
+	                break;
+	        case 2: 
+	                $("#info-usuario").show("drop");
+	                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
+	                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
+	                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3over.jpg");
+	                break;
+	         case 3:   
+	                register();
+	                $("#solicitud-finalizada").show("drop");
+	                $("#paso_0").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-1over.jpg");
+	                $("#paso_1").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-2over.jpg");
+	                $("#paso_2").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-3over.jpg");
+	                $("#paso_0").hide();
+	                $("#paso_1").hide();
+	                $("#paso_2").hide();
+	                $("#btn-c").hide();
+	                $("#btn-c2").hide();
+					$("#text_end").show();
+					$("#precio1").show();
+	                break;
+	        default: $("#cotizacion").show("drop");
+	                break; 
+	    }
+	}
+	function validateUserData(form, data, hasError)
+	{   
+	    if(!hasError){
+	        paso++;
+	        validarPasos();
+	    }
+	}
+	function register(){
+	    console.log("registrando");
+	    var dataUser=$("#client-form").serialize();
+	    var dataConcessioner=$("#concessioner-form").serialize();
+	    var dataVehicle= $("#vehicle-version-form").serialize();
+	    $.ajax({
+	         type: 'POST',
+	         url: '<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/completeRegistrationAjax',
+	         data:dataUser+"&"+dataConcessioner+"&"+dataVehicle,
+	         dataType:'json',
+	         success:function(data){
+	                $("#mensajeRegistro").html(data["transactionMessage"]);
+	                if(data["login"]){
+	                    window.location.href = "<?php echo Yii::app()->createAbsoluteUrl("community/planrecommended") ?>";
+	                }
+	               },
+	         error: function(data) { // if error occured
+	                 $("#mensajeRegistro").html(data);
+	                 }
+	    });
+	}
 
 </script>

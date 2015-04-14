@@ -9,6 +9,7 @@ class DefaultController extends Controller
               $client = new Client;
               $vehicles= Vehicle::model()->findAllByAttributes(array('status'=>'ACTIVE'));
               $cities=  City::model()->findAll();
+              $banks=Ifis::model()->findAll();
               $modelo='';
               $medio='default';
               if(isset($_GET['utm_model'])){
@@ -17,7 +18,7 @@ class DefaultController extends Controller
                 if(isset($_GET["medio"])){
                  $medio=$_GET["medio"];
                 }
-            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'modelo'=>$modelo,'medio'=>$medio));
+            $this->render('index',array('model'=>$model,"vehicles"=>$vehicles,'cities'=>$cities,'client'=>$client,'modelo'=>$modelo,'medio'=>$medio,'banks'=>$banks));
 	
                 
                 
@@ -116,7 +117,7 @@ class DefaultController extends Controller
             
                     $client = New Client;
                     $client->attributes=$_POST['Client'];
-                    if($client->save()){
+                    /*if($client->save()){
                     $quotation= new Quotation;
                     $quotation->attributes=$_POST['Quotation'];
                     $quotation->client_id=$client->primaryKey;
@@ -136,17 +137,33 @@ class DefaultController extends Controller
               // $message->addTo("franklin.paula@share.com.ec");
 					    $message->addTo("solicitudeswebnissan@gmail.com");
                         $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
-                        Yii::app()->mail->send($message);
+                        Yii::app()->mail->send($message);*/
                         echo json_encode(true);
                         
-                    }
+                    /*}
                     else{
                         echo json_encode(false);
                     }
                     }
                     $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));
-                    echo json_encode(true);
+                    echo json_encode(true);*/
        
         }
-        
+    
+    public function actionLoadBanks()
+    {
+    	$banks=Ifis::model()->findAll();
+    	$return=[];
+    	foreach ($banks as $i => $bank) {
+    		$b=[];
+    		$b['plazo_min']=$bank->plazo_min;
+    		$b['plazo_max']=$bank->plazo_max;
+    		$b['entrada']=$bank->entrada;
+    		$b['tasa']=$bank->tasa;
+    		$b['seguro']=$bank->seguro;
+    		$b['tasa_seguro']=$bank->tasa_seguro;
+    		$return[$bank->id]=$b;
+    	}
+    	echo json_encode($return);
+    }
 }
