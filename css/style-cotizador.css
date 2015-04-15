@@ -417,4 +417,14 @@ border-radius:5px;
 	font-size:12px;
 	color:#828282;
 	padding:7px 1%;
-	}			
+	}		
+.title_co {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+#precio_contado1,#precio_contado2, #ifi1,#ifi2,#entrada_minima1,#cuotas1,#tasa_interes1,#tasa_interes2,#dispositivo1,#dispositivo2,#gastos_administrativos1,#gastos_administrativos2,#valor_financiar1,#valor_financiar2,#seguro1,#seguro2,#total_financiar1,#total_financiar2,#cuota_estimada1,#cuota_estimada2,#entrada_minima2,#cuotas2 {
+  float: left;
+  width:45%;
+  padding: 5px 0 5px 0;
+}
