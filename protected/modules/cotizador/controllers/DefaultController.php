@@ -117,7 +117,7 @@ class DefaultController extends Controller
             
                     $client = New Client;
                     $client->attributes=$_POST['Client'];
-                    /*if($client->save()){
+                    if($client->save()){
                     $quotation= new Quotation;
                     $quotation->attributes=$_POST['Quotation'];
                     $quotation->client_id=$client->primaryKey;
@@ -137,16 +137,16 @@ class DefaultController extends Controller
               // $message->addTo("franklin.paula@share.com.ec");
 					    $message->addTo("solicitudeswebnissan@gmail.com");
                         $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
-                        Yii::app()->mail->send($message);*/
+                        Yii::app()->mail->send($message);
                         echo json_encode(true);
                         
-                    /*}
+                    }
                     else{
                         echo json_encode(false);
                     }
                     }
-                    $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));
-                    echo json_encode(true);*/
+                    // $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));
+                    echo json_encode(true);
        
         }
     
