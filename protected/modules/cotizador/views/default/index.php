@@ -292,7 +292,7 @@
                 <!-- cont izquierda -->                
                 <div class="carro-cotizar-der">
                     <div id="car_name2"class="titulo-auto2">XTRAIL 2.5</div>
-                    <div class="img-auto">
+                    <div class="img-auto2">
                         <img id="car_second_final" src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/auto-cotizador.jpg" width="438" height="295" alt="auto nissan"/>
                         <div>
                         	<label class="title_co">Precio Contado</label> 

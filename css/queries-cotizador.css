@@ -3,13 +3,17 @@
 @media screen and (max-width: 959px) {
 .contenido-cotiza{
 	width:98%;
-	margin:0 1%;
+	margin:0;
 	}
 .cont-cotizador {
 	width:50%;
 }		
+img#car_second_final{
+width: 95%;    
+}    
 .barra-btn img {
-	width:32.3%;
+width: 32%;
+height: auto;
 float:left;
 margin-left:1%;
 }
@@ -86,10 +90,18 @@ float: left;
 font-size: 14px;
 margin-top: 7px;
 }
-.titulo-auto {
+.titulo-auto,.titulo-auto2 {
 font-size: 20px;
 margin: 10px 0 10px 0;
 }
+.title_co {
+  width: 51%;
+  margin-top: 5%;} 
+.btn-cotizadador img {
+  width: 70%!important;
+}
+.btn-cotizadador{
+margin-left: 0;}    
 }
 /**/
 @media screen and (max-width: 520px) {
@@ -110,7 +122,7 @@ width: 70%;
   margin-top: 5%;
 }    
 .titulo-auto2 {
-  width: 265px;
+  width: 100%;
      font-size: 26px;
 }  
 .titulo-auto {

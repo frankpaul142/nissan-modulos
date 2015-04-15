@@ -92,17 +92,23 @@ margin: 0px 0 10px 0;
 	}	
 .carro-cotizar-der{
 float: right;
-width: 438px;
-margin-top: -55px;
+width: 100%;
+margin-top: -68px;
 
 	}		
 .img-auto{
 	width:438px;
 	float:left;
 	margin:5px;
+	text-align:center;        
+    clear: both;
+	}
+.img-auto2{
+	width:100%;
+	float:left;
+	margin:5px;
 	text-align:center;
-        clear: both;
-        
+    clear: both;
 	}
 .botones-autos{
 	width:100%;
