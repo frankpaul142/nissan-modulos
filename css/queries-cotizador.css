@@ -105,6 +105,16 @@ margin: 0px 0 10px 0;
 width: 70%;
 	margin: 5px 15%;
 }
+.title_co {
+  width: 51%;
+  margin-top: 5%;
+}    
+.titulo-auto2 {
+  width: 265px;
+     font-size: 26px;
+
+}  
+    
 }
 /**/
 @media screen and (max-width: 480px) {

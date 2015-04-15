@@ -102,7 +102,7 @@
 width: 90%;
 }
 input[type="text"]{
-	width:100px;}	
+	  width: 90%;}	
 		}
 @media all and (max-width: 320px) {
 	.concecionarios {
