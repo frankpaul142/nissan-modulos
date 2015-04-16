@@ -343,11 +343,7 @@
         	</div>
     	</div>
 	</div>
-<<<<<<< HEAD
-       
-=======
-    <button class="calcular-cuota" id="calcular_cuota" style="display:none">Calcular cuota</button>     
->>>>>>> 9c7c236e123472a1a0ba2f50a084465496c14c8e
+
 	<div class="footer-n">Los colores son referenciales. Las especificaciones y precios de los vehículos pueden variar sin previo aviso.</div>
 <script type='text/javascript'>
   	var paso=0;
