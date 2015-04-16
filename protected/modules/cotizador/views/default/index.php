@@ -341,7 +341,7 @@
         	</div>
     	</div>
 	</div>
-    <button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button>     
+    <button class="calcular-cuota" id="calcular_cuota" style="display:none">Calcular cuota</button>     
 	<div class="footer-n">Los colores son referenciales. Las especificaciones y precios de los vehículos pueden variar sin previo aviso.</div>
 <script type='text/javascript'>
   	var paso=0;
@@ -735,6 +735,7 @@
 	                $("#btn-c2").hide();
 					$("#text_end").show();
 					$("#precio1").show();
+					$('#calcular_cuota').show();
 	                break;
 	        default: $("#cotizacion").show("drop");
 	                break; 
