@@ -435,17 +435,21 @@ border-radius:5px;
   padding: 5px 0 5px 0;
 }
 .calcular-cuota {
-  float: left;
-  width: 162px;
+  width: 100%;
+  margin: 2% auto;
   text-align: center;
   color: #000000;
-  padding: 10px 0;
+  padding: 15px 0;
   font-weight: bold;
-  height: 37px;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
-  margin-left: 45px;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  box-shadow: 1px 1px 2px -1px;
+  font-size: 12px;
 }
 .calcular-cuota:hover{
     background-color: #C71633;

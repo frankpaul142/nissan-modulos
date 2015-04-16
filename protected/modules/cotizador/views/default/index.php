@@ -12,6 +12,7 @@
 </head>
 <body>
 	<div class="contenido-cotiza">
+       
     	<!--<div class="banner-principal">
        		<div class="fotorama" data-width="100%" data-autoplay="6000" data-loop="true" data-arrows="true" data-transition="dissolve">
                 	<img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/banner/FRONTIER.png" alt="Nissan Frontier"/>
@@ -102,6 +103,7 @@
             <!-- Cotizacion -->
             <div id="cotizacion" class="form">
                 <?php $form=$this->beginWidget('CActiveForm', array(
+    
 	'id'=>'vehicle-version-form',
         'action'=>Yii::app()->createUrl('/cotizador/Default/validateRegisterVehicleDataAjax'),
         'enableClientValidation'=>false,
@@ -299,7 +301,7 @@
                         <div>
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado2"></label><br/>
-						   	<button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button>
+						   	
                         	<div id="calculador_cuota2" style="display:none">
 							   	<label class="title_co">Entidad Financiera</label> 
 							   	<select id="ifi2">
@@ -339,6 +341,7 @@
         	</div>
     	</div>
 	</div>
+    <button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button>     
 	<div class="footer-n">Los colores son referenciales. Las especificaciones y precios de los vehículos pueden variar sin previo aviso.</div>
 <script type='text/javascript'>
   	var paso=0;
