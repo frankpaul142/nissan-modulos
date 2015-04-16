@@ -632,6 +632,7 @@
         $('#calcular_cuota').click(function () {
         	$('#calculador_cuota1').show('drop');
         	$('#calculador_cuota2').show('drop');
+        	$('#calcular_cuota').hide();
         });
 	});
 
