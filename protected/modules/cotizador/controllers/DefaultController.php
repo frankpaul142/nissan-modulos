@@ -113,11 +113,11 @@ class DefaultController extends Controller
          
             echo json_encode($return);
         } 
-                public function actionCompleteRegistrationAjax(){            
-            
-                    $client = New Client;
-                    $client->attributes=$_POST['Client'];
-                    if($client->save()){
+        
+        public function actionCompleteRegistrationAjax(){            
+            $client = New Client;
+            $client->attributes=$_POST['Client'];
+                    /*if($client->save()){
                     $quotation= new Quotation;
                     $quotation->attributes=$_POST['Quotation'];
                     $quotation->client_id=$client->primaryKey;
@@ -145,7 +145,7 @@ class DefaultController extends Controller
                         echo json_encode(false);
                     }
                     }
-                    // $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));
+                    // $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"));*/
                     echo json_encode(true);
        
         }

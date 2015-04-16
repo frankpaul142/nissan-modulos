@@ -42,7 +42,7 @@
                 </div>
         <div id="car_name" class="titulo-auto">Escoja un modelo</div>
           <div id="car_name3" class="titulo-auto" style="display: none;">Escoja un modelo</div>
-                            <div class="img-auto">
+                    <div class="img-auto">
                         <div id="first_car_cont" class="auto1"><img id="first_car_img" src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/auto-cotizador.jpg" width="438" height="295" alt="auto nissan"/></div>
                         <div id="second_car_cont" class="auto2"><img id="second_car_img" src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/auto-cotizador.jpg" width="438" height="295" alt="auto nissan"/></div>
 						<!-- -->
@@ -54,35 +54,37 @@
 						<div id="precio1" style="display:none">
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado1"></label><br/>
-                        	<label class="title_co">Entidad Financiera</label> 
-						   	<select id="ifi1">
-								<option>Elija una opción</option>
-								<?php foreach ($banks as $i => $bank) { ?>	
-								<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
-								<?php } ?>
-							</select><br/>
-                        	<label class="title_co">Entrada Mínima</label>
-                        	<select id="entrada_minima1">
-								<option>Elija una opción</option>
-							</select><br/>
-                        	<label class="title_co">Cuotas</label>
-						   	<select id="cuotas1">
-						   		<option>Elija una opción</option>
-						   	</select><br/>
-                        	<label class="title_co">Tasa de Interés</label> 
-						   	<label id="tasa_interes1">0</label><br/>
-                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
-						   	<label id="dispositivo1">0</label><br/>
-                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
-						   	<label id="gastos_administrativos1">0</label><br/>
-                        	<label class="title_co">Valor a Financiar Aprox.</label> 
-						   	<label id="valor_financiar1">0</label><br/>
-                        	<label class="title_co">Seguro Aprox. por <span id="spAnos1"></span> años</label> 
-						   	<label id="seguro1">0</label><br/>
-                        	<label class="title_co">Total a Financiar</label> 
-						   	<label id="total_financiar1">0</label><br/>
-                        	<label class="title_co">Cuota mensual estimada</label> 
-						   	<label id="cuota_estimada1">0</label><br/>
+						   	<div id="calculador_cuota1" style="display:none">
+	                        	<label class="title_co">Entidad Financiera</label> 
+							   	<select id="ifi1">
+									<option>Elija una opción</option>
+									<?php foreach ($banks as $i => $bank) { ?>	
+									<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
+									<?php } ?>
+								</select><br/>
+	                        	<label class="title_co">Entrada Mínima</label>
+	                        	<select id="entrada_minima1">
+									<option>Elija una opción</option>
+								</select><br/>
+	                        	<label class="title_co">Cuotas</label>
+							   	<select id="cuotas1">
+							   		<option>Elija una opción</option>
+							   	</select><br/>
+	                        	<label class="title_co">Tasa de Interés</label> 
+							   	<label id="tasa_interes1">0</label><br/>
+	                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
+							   	<label id="dispositivo1">0</label><br/>
+	                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
+							   	<label id="gastos_administrativos1">0</label><br/>
+	                        	<label class="title_co">Valor a Financiar Aprox.</label> 
+							   	<label id="valor_financiar1">0</label><br/>
+	                        	<label class="title_co">Seguro Aprox. por <span id="spAnos1"></span> años</label> 
+							   	<label id="seguro1">0</label><br/>
+	                        	<label class="title_co">Total a Financiar</label> 
+							   	<label id="total_financiar1">0</label><br/>
+	                        	<label class="title_co">Cuota mensual estimada</label> 
+							   	<label id="cuota_estimada1">0</label><br/>
+						   	</div>
                         </div>
                         <div id="info_concessioner" class="info-concesionario" style="display:none;">
                             <div class="tit-concesionario">Concesionario</div>
@@ -297,35 +299,38 @@
                         <div>
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado2"></label><br/>
-						   	<label class="title_co">Entidad Financiera</label> 
-						   	<select id="ifi2">
-								<option>Elija una opción</option>
-								<?php foreach ($banks as $i => $bank) { ?>	
-								<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
-								<?php } ?>
-							</select><br/>
-                        	<label class="title_co">Entrada Mínima</label>
-                        	<select id="entrada_minima2">
-								<option>Elija una opción</option>
-							</select><br/>
-                        	<label class="title_co">Cuotas</label> 
-						   	<select id="cuotas2">
-						   		<option>Elija una opción</option>
-						   	</select><br/>
-                        	<label class="title_co">Tasa de Interés</label> 
-						   	<label id="tasa_interes2">0</label><br/>
-                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
-						   	<label id="dispositivo2">0</label><br/>
-                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
-						   	<label id="gastos_administrativos2">0</label><br/>
-                        	<label class="title_co">Valor a Financiar Aprox.</label> 
-						   	<label id="valor_financiar2">0</label><br/>
-                        	<label class="title_co">Seguro Aprox. por <span id="spAnos2">0</span> años</label> 
-						   	<label id="seguro2">0</label><br/>
-                        	<label class="title_co">Total a Financiar</label> 
-						   	<label id="total_financiar2">0</label><br/>
-                        	<label class="title_co">Cuota mensual estimada</label> 
-						   	<label id="cuota_estimada2">0</label><br/>
+						   	<button class="btn-siguiente-input2" id="calcular_cuota">Calcular cuota</button>
+                        	<div id="calculador_cuota2" style="display:none">
+							   	<label class="title_co">Entidad Financiera</label> 
+							   	<select id="ifi2">
+									<option>Elija una opción</option>
+									<?php foreach ($banks as $i => $bank) { ?>	
+									<option value="<?php echo $bank->id ?>"><?php echo $bank->nombre ?></option>
+									<?php } ?>
+								</select><br/>
+	                        	<label class="title_co">Entrada Mínima</label>
+	                        	<select id="entrada_minima2">
+									<option>Elija una opción</option>
+								</select><br/>
+	                        	<label class="title_co">Cuotas</label> 
+							   	<select id="cuotas2">
+							   		<option>Elija una opción</option>
+							   	</select><br/>
+	                        	<label class="title_co">Tasa de Interés</label> 
+							   	<label id="tasa_interes2">0</label><br/>
+	                        	<label class="title_co">Dispositivo por 1 año Aprox.</label> 
+							   	<label id="dispositivo2">0</label><br/>
+	                        	<label class="title_co">Gastos Administrativos Aprox.</label> 
+							   	<label id="gastos_administrativos2">0</label><br/>
+	                        	<label class="title_co">Valor a Financiar Aprox.</label> 
+							   	<label id="valor_financiar2">0</label><br/>
+	                        	<label class="title_co">Seguro Aprox. por <span id="spAnos2">0</span> años</label> 
+							   	<label id="seguro2">0</label><br/>
+	                        	<label class="title_co">Total a Financiar</label> 
+							   	<label id="total_financiar2">0</label><br/>
+	                        	<label class="title_co">Cuota mensual estimada</label> 
+							   	<label id="cuota_estimada2">0</label><br/>
+						   	</div>
                         </div>
                         <a href="#" class="btn-cotizadador" id="solicitar-nueva"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-cotizador.png"/></a>
                         <a href="http://nissan.com.ec/sp/web/nscuploader/gama-nissan.html" target="_blank" class="btn-cotizadador"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-gamaautos.png" style="margin-left: 25px;"/></a>
@@ -339,7 +344,6 @@
   	var paso=0;
   	var banks;
   	$.get('<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadBanks').success(function (data) {
-  		//console.log(data);
   		banks=JSON.parse(data);
   	});
 
@@ -620,6 +624,11 @@
         	else{
         		cero(2);
         	}
+        });
+
+        $('#calcular_cuota').click(function () {
+        	$('#calculador_cuota1').show('drop');
+        	$('#calculador_cuota2').show('drop');
         });
 	});
 
