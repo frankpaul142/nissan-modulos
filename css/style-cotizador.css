@@ -434,3 +434,21 @@ border-radius:5px;
   width:45%;
   padding: 5px 0 5px 0;
 }
+.calcular-cuota {
+  float: left;
+  width: 162px;
+  text-align: center;
+  color: #000000;
+  padding: 10px 0;
+  font-weight: bold;
+  height: 37px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 45px;
+}
+.calcular-cuota:hover{
+    background-color: #C71633;
+    color: #fff;
+        
+}

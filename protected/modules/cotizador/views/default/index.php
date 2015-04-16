@@ -299,7 +299,7 @@
                         <div>
                         	<label class="title_co">Precio Contado</label> 
 						   	<label id="precio_contado2"></label><br/>
-						   	<button class="btn-siguiente-input2" id="calcular_cuota">Calcular cuota</button>
+						   	<button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button>
                         	<div id="calculador_cuota2" style="display:none">
 							   	<label class="title_co">Entidad Financiera</label> 
 							   	<select id="ifi2">
