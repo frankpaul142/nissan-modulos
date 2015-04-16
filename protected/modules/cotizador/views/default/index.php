@@ -334,14 +334,16 @@
 							   	<label id="cuota_estimada2">0</label><br/>
 						   	</div>
                         </div>
-                        <a href="#" class="btn-cotizadador" id="solicitar-nueva"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-cotizador.png"/></a>
+<!--<button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button> -->    
+ <a href="#" class="btn-cotizadador" id="calcular_cuota"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-calc-cuota.png"/></a>                        
+<a href="#" class="btn-cotizadador" id="solicitar-nueva"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-cotizador.png"/></a>
                         <a href="http://nissan.com.ec/sp/web/nscuploader/gama-nissan.html" target="_blank" class="btn-cotizadador"><img src="<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/btn-gamaautos.png" style="margin-left: 25px;"/></a>
                     </div>
                 </div>
         	</div>
     	</div>
 	</div>
-    <button class="calcular-cuota" id="calcular_cuota">Calcular cuota</button>     
+       
 	<div class="footer-n">Los colores son referenciales. Las especificaciones y precios de los vehículos pueden variar sin previo aviso.</div>
 <script type='text/javascript'>
   	var paso=0;
