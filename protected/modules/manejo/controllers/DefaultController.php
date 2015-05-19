@@ -85,11 +85,15 @@ class DefaultController extends Controller
                 $message->setBody(array("client"=>$client,"drive"=>$driv),'text/html');
 				$message->setSubject('Solicitud Prueba de Manejo');
               	foreach($driv->concessioner->emails as $email){
+                 	// if($email->type=="DRIVE"){
                  	if($email->type=="QUOTATION"){
                     	$message->addTo($email->description);
                		}
                	}
-          $message->addTo("solicitudeswebnissan@gmail.com");
+          		$message->addTo("anaquishpe@ayasa.com.ec");
+				$message->addTo("mgonzalez@ayasa.com.ec");
+				$message->addTo("gzumarraga@ayasa.com.ec");
+				$message->addTo("solicitudeswebnissan@gmail.com");
                 $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
                 Yii::app()->mail->send($message);
                 echo json_encode(true);

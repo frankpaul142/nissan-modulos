@@ -95,6 +95,8 @@ class SiteController extends Controller
 				$message->addTo($email->description);
 				}
 				$message->addTo("anaquishpe@ayasa.com.ec");
+				$message->addTo("mgonzalez@ayasa.com.ec");
+				$message->addTo("gzumarraga@ayasa.com.ec");
 				$message->addTo("solicitudeswebnissan@gmail.com");
 			
 			}
@@ -215,7 +217,10 @@ class SiteController extends Controller
                         }
                     }
                     //$message->addTo("supervisorcallcenter@ayasa.com.ec");
-                    $message->addTo("solicitudeswebnissan@gmail.com");
+                    $message->addTo("anaquishpe@ayasa.com.ec");
+					$message->addTo("mgonzalez@ayasa.com.ec");
+					$message->addTo("gzumarraga@ayasa.com.ec");
+					$message->addTo("solicitudeswebnissan@gmail.com");
                     Yii::app()->mail->send($message);
                     $this->render('result', array("client" => $client, "vehicle" => $vehicle, "technicaldate" => $technicaldate));
                 } else {

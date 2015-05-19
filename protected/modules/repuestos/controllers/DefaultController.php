@@ -62,9 +62,10 @@ class DefaultController extends Controller
                             $message->addTo($email->description);
                        }
                        } 
-					    $message->addTo("gzumarraga@ayasa.com.ec");
+					    $message->addTo("anaquishpe@ayasa.com.ec");
                         $message->addTo("mgonzalez@ayasa.com.ec");
-						$message->addTo("solicitudeswebnissan@gmail.com");
+                        $message->addTo("gzumarraga@ayasa.com.ec");
+                        $message->addTo("solicitudeswebnissan@gmail.com");
                         $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
                         Yii::app()->mail->send($message);
 						$this->render('result',array("client"=>$client,"vehicle"=>$vehicle,"replacement"=>$replacement));
@@ -183,8 +184,9 @@ class DefaultController extends Controller
                             $message->addTo($email->description);
                        }
                        } 
-					    $message->addTo("gzumarraga@ayasa.com.ec");
-                        $message->addTo("mgonzalez@ayasa.com.ec");
+					    $message->addTo("anaquishpe@ayasa.com.ec");
+						$message->addTo("mgonzalez@ayasa.com.ec");
+						$message->addTo("gzumarraga@ayasa.com.ec");
 						$message->addTo("solicitudeswebnissan@gmail.com");
                         $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
                         Yii::app()->mail->send($message);

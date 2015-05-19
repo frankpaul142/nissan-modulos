@@ -62,7 +62,10 @@ class DefaultController extends Controller
                   if($email->type=="SUGGESTION-$aux"){
             $message->addTo($email->description);
             // $message->addTo('franklin.paula@share.com.ec');
-			$message->addTo('solicitudeswebnissan@gmail.com');
+			$message->addTo("anaquishpe@ayasa.com.ec");
+			$message->addTo("mgonzalez@ayasa.com.ec");
+			$message->addTo("gzumarraga@ayasa.com.ec");
+			$message->addTo("solicitudeswebnissan@gmail.com");
              if($email->type=="SUGGESTION-O"){
              $message->addTo("rpazmino@ayasa.com.ec");
              }
