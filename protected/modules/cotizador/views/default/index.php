@@ -348,6 +348,9 @@
 <script type='text/javascript'>
   	var paso=0;
   	var banks;
+    var prices1=[];
+    var prices2=[];
+
   	$.get('<?php echo Yii::app()->request->getBaseUrl(true); ?>/cotizador/Default/loadBanks').success(function (data) {
   		banks=JSON.parse(data);
   	});
@@ -386,7 +389,10 @@
                          	aux.attr("value",val.id);
                         	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         	$("#Quotation_vehicle_version_id").append(aux);
-                        	$('#precio_contado1').text('$'+val.price);
+                            if(i=='0'){
+                        	   $('#precio_contado1').text('$'+val.price);
+                            }
+                            prices1[val.id]=val.price;
                         }
                     });
                     $("#car_name").html(data.name);
@@ -408,7 +414,7 @@
 				},
                 success: function(data) {
                     $.map( data, function( val, i ) {
-                        //console.log(val);
+                        // console.log(i);
                         if(val.id){
                         	var z="";
                          	var y="";
@@ -423,13 +429,23 @@
                          	aux.attr("value",val.id);
                         	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         	$("#Quotation_vehicle_version_id").append(aux);
-                        	$('#precio_contado1').text('$'+val.price);
+                        	if(i=='0'){
+                               $('#precio_contado1').text('$'+val.price);
+                            }
+                            prices1[val.id]=val.price;
                         }
                     });
                     $("#car_name").html(data.name);
                     $("#first_car_img").attr("src","<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/vehicle/"+data.image);
                 }                  
            	});
+        });
+
+        $("#Quotation_vehicle_version_id").change(function () {
+            $('#precio_contado1').text('$'+prices1[$(this).val()]);
+        });
+        $("#Quotation_vehicle_version_id2").change(function () {
+            $('#precio_contado2').text('$'+prices2[$(this).val()]);
         });
 
 		$("#city").change(function(event){
@@ -489,7 +505,10 @@
                          	aux.attr("value",val.id);
                         	aux.html(" "+val.motor+" "+val.type+" "+val.transmission+" "+z+" "+y);
                         	$("#Quotation_vehicle_version_id2").append(aux);
-                        	$('#precio_contado2').text('$'+val.price);
+                        	if(i=='0'){
+                               $('#precio_contado2').text('$'+val.price);
+                            }
+                            prices2[val.id]=val.price;
                        	}
                     });
             		$("#car_name2").html(data.name);
