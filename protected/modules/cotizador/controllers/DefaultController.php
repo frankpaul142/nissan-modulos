@@ -78,7 +78,7 @@ class DefaultController extends Controller
         public function actionLoadVersionVehicle(){
 		 $criteria = new CDbCriteria;
 		   $criteria->order='reference'; 
-		   $criteria->condition = 'id != 32 AND id != 33 AND id != 34  AND id != 36 AND id != 37 AND id != 38 AND id != 39 AND id != 40 AND id != 41 AND id != 42';
+		   $criteria->condition = 'id != 32 AND id != 33 AND id != 34  AND id != 36 AND id != 37 AND id != 38 AND id != 39 AND id != 40 AND id != 41 AND id != 42 AND id != 16';
             $vehicle_version=  VehicleVersion::model()->findAllByAttributes(array("vehicle_id"=>$_POST['vehicle_id'],"status"=>"ACTIVE"),$criteria);
             $vehicle_image=  Picture::model()->findByAttributes(array("vehicle_id"=>$_POST['vehicle_id']));
             $vehicle_s= Vehicle::model()->findByPk($_POST['vehicle_id']);
