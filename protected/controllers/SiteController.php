@@ -310,11 +310,11 @@ class SiteController extends Controller
             $city= City::model()->findByPk($_POST['city_id']);
             $return= array();
             foreach($city->concessioners as $z => $concessioner){
-              
-                $return[$z]['id']=$concessioner->id;
-                $return[$z]['name']=$concessioner->name;
-                $return[$z]['address']=$concessioner->address;
-                
+              	if($concessioner->id!=14 && $concessioner->id!=4){
+	                $return[$z]['id']=$concessioner->id;
+	                $return[$z]['name']=$concessioner->name;
+	                $return[$z]['address']=$concessioner->address;
+                }
             }
             echo json_encode($return);
         }

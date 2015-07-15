@@ -64,11 +64,13 @@ class DefaultController extends Controller
             // $message->addTo('franklin.paula@share.com.ec');
 //			$message->addTo("anaquishpe@ayasa.com.ec");
 			$message->addTo("mgonzalez@ayasa.com.ec");
-			$message->addTo("gzumarraga@ayasa.com.ec");
+            $message->addTo("gzumarraga@ayasa.com.ec");
+            $message->addTo("vgorozabel@ayasa.com.ec");
+			$message->addTo("rpazmino@ayasa.com.ec");
 			$message->addTo("solicitudeswebnissan@gmail.com");
-             if($email->type=="SUGGESTION-O"){
+             /*if($email->type=="SUGGESTION-O"){
              $message->addTo("rpazmino@ayasa.com.ec");
-             }
+             }*/
             $message->setFrom(array(Yii::app()->params['adminEmail']=>'El Equipo Nissan Ecuador'));
            
             }
