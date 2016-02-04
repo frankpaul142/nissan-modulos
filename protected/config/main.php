@@ -79,10 +79,10 @@ return array(
 		// uncomment the following to use a MySQL database
 	
 		'db'=>array(
-			'connectionString' => 'mysql:host=166.63.0.204;dbname=nissanec_web2',
+			'connectionString' => 'mysql:host=localhost;dbname=nissanec_web2',
 			'emulatePrepare' => true,
-			'username' => 'nissanec_webcont',
-			'password' => '+E8yw6Lv)g.V',
+			'username' => 'root',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		/*'db'=>array(
